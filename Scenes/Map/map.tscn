@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlc7f4np3qkgc"]
+
+[ext_resource type="PackedScene" uid="uid://b1jhi8vl0d1v1" path="res://Scenes/Map/DefaultFloor/default_floor.tscn" id="1_q4vfh"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_caclb"]
+
+[node name="Map" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("WorldBoundaryShape3D_caclb")
+
+[node name="DefaultFloor" parent="." instance=ExtResource("1_q4vfh")]
