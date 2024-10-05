@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://btgap1d50aldt"]
+
+[ext_resource type="Script" path="res://Scenes/Bullets/PlayerLaser/player_laser.gd" id="1_sukx7"]
+[ext_resource type="Texture2D" uid="uid://v021hckdjtol" path="res://Images/LaserSprite.png" id="1_ufemg"]
+
+[node name="PlayerLaser" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+texture = ExtResource("1_ufemg")
+script = ExtResource("1_sukx7")
