@@ -11,8 +11,9 @@ var wideshotBuffer = 0
 var weaponRotation = 0
 var bulletIns
 var laserIns
+var SPEED = 15.0
+var canDash = true
 
-const SPEED = 10.0
 const wideshotAngle = PI/8
 const wideshotBuffMax = .08
 
@@ -44,11 +45,11 @@ func _process(delta: float) -> void:
 					bulletIns = bullet.instantiate()
 					bulletIns.rotation.y = weaponRotation + (wideshotAngle * (bulletSpawn - .5))
 					bulletIns.position = position
-					bulletSpawn += .618
+					bulletSpawn += 0.618
 					if(bulletSpawn > 1):
 						bulletSpawn -= 1
 					get_parent().add_child(bulletIns)
-				wideshotBuffer += 1 * delta
+				wideshotBuffer += .5 * delta
 				if(wideshotBuffer >= wideshotBuffMax):
 					wideshotBuffer = 0
 			1:
@@ -64,7 +65,22 @@ func _process(delta: float) -> void:
 		weapon += 1
 		if(weapon >= weaponNum):
 			weapon = 0
-	
+			
+	if(Input.is_action_just_pressed("dash")):
+		if canDash:
+			$DashTimer.start()
+			SPEED += 35.0
+			canDash = false
+
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouse:
 		weaponRotation = -Vector2(960, 540).angle_to_point(event.position) + PI/2
+
+func _on_dash_timer_timeout() -> void:
+	SPEED = 15
+	$DashCooldown.start()
+	print_debug("dashcooldown started")
+
+func _on_dash_cooldown_timeout() -> void:
+	canDash = true
+	print_debug("candash = true")

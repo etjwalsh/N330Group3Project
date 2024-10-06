@@ -5,6 +5,7 @@
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_caclb"]
 
 [node name="Map" type="Node3D"]
+transform = Transform3D(19.6845, 0, 0, 0, 1, 0, 0, 0, 18.5282, 0, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
