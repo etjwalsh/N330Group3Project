@@ -79,8 +79,6 @@ func _input(event: InputEvent) -> void:
 func _on_dash_timer_timeout() -> void:
 	SPEED = 15
 	$DashCooldown.start()
-	print_debug("dashcooldown started")
 
 func _on_dash_cooldown_timeout() -> void:
 	canDash = true
-	print_debug("candash = true")
