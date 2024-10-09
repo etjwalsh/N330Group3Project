@@ -71,6 +71,7 @@ func _process(delta: float) -> void:
 			$DashTimer.start()
 			SPEED += 35.0
 			canDash = false
+			$AnimatedSprite3D.modulate = Color(0, 1, 1) # REMOVE LATER
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouse:
@@ -79,6 +80,7 @@ func _input(event: InputEvent) -> void:
 func _on_dash_timer_timeout() -> void:
 	SPEED = 15
 	$DashCooldown.start()
+	$AnimatedSprite3D.modulate = Color(1, 1, 1) # REMOVE LATER
 
 func _on_dash_cooldown_timeout() -> void:
 	canDash = true

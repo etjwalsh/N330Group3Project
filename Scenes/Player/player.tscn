@@ -22,7 +22,7 @@ animations = [{
 script = ExtResource("1_s4hq0")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 9.8075, 9.99301)
+transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766044, 0, -0.766044, 0.642788, 0.729536, 13.1099, 8.79718)
 current = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
