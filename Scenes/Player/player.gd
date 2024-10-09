@@ -6,19 +6,25 @@ var weaponNum = 3
 #2: sword
 var weapon = 0
 
+const wideshotAngle = PI/8
+const wideshotBuffMax = .08
+const energyUse = 200
+const energyGain = 100
+const dashSpeed = 30.0
+const walkSpeed = 15.0
+
 var bulletSpawn = .516
 var wideshotBuffer = 0
 var weaponRotation = 0
 var bulletIns
 var laserIns
-var SPEED = 15.0
+var swordIns
+var speed = walkSpeed
 var canDash = true
-
-const wideshotAngle = PI/8
-const wideshotBuffMax = .08
 
 const bullet = preload("res://Scenes/Bullets/PlayerBullet/player_bullet.tscn")
 const laser = preload("res://Scenes/Bullets/PlayerLaser/player_laser.tscn")
+const sword = preload("res://Scenes/Bullets/PlayerSword/player_sword.tscn")
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -30,11 +36,11 @@ func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_vector("left", "right", "up", "down")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+		velocity.x = direction.x * speed
+		velocity.z = direction.z * speed
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, speed)
+		velocity.z = move_toward(velocity.z, 0, speed)
 	move_and_slide()
 
 func _process(delta: float) -> void:
@@ -58,27 +64,48 @@ func _process(delta: float) -> void:
 					add_child(laserIns)
 				laserIns.rotation.y = weaponRotation
 			2:
-				pass
+				if(!is_instance_valid(swordIns)):
+					swordIns = sword.instantiate()
+					add_child(swordIns)
+				swordIns.rotation.y = weaponRotation
 	if(is_instance_valid(laserIns) && (!Input.is_action_pressed("use") || weapon != 1)):
 		laserIns.queue_free()
+	if(is_instance_valid(swordIns) && (!Input.is_action_pressed("use") || weapon != 2)):
+		swordIns.queue_free()
 	if(Input.is_action_just_pressed("switch")):
 		weapon += 1
 		if(weapon >= weaponNum):
 			weapon = 0
-			
-	if(Input.is_action_just_pressed("dash")):
+	
+	#roll system
+	"""
+	if(Input.is_action_just_pressed("dash"))
 		if canDash:
 			$DashTimer.start()
 			SPEED += 35.0
 			canDash = false
 			$AnimatedSprite3D.modulate = Color(0, 1, 1) # REMOVE LATER
+	"""
+	#dash system (lines 90 to 101)
+	if(Input.is_action_pressed("dash")):
+		PlayerAutoload.energy -= energyUse * delta
+		if(PlayerAutoload.energy < 0):
+			PlayerAutoload.energy = 0
+			speed = walkSpeed
+		else:
+			speed = dashSpeed
+	else:
+		PlayerAutoload.energy += energyGain * delta
+		if(PlayerAutoload.energy > 100):
+			PlayerAutoload.energy = 100
+		speed = walkSpeed
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouse:
 		weaponRotation = -Vector2(960, 540).angle_to_point(event.position) + PI/2
 
 func _on_dash_timer_timeout() -> void:
-	SPEED = 15
+	speed = 15
 	$DashCooldown.start()
 	$AnimatedSprite3D.modulate = Color(1, 1, 1) # REMOVE LATER
 
