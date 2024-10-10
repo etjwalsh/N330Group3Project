@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dlc7f4np3qkgc"]
+[gd_scene load_steps=6 format=3 uid="uid://dlc7f4np3qkgc"]
 
 [ext_resource type="PackedScene" uid="uid://b1jhi8vl0d1v1" path="res://Scenes/Map/DefaultFloor/default_floor.tscn" id="1_q4vfh"]
 
@@ -15,9 +15,6 @@ sky = SubResource("Sky_qofd2")
 tonemap_mode = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_pqmfm"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_f6kab"]
-size = Vector3(100, 100, 100)
 
 [node name="Map" type="Node3D"]
 transform = Transform3D(19.6845, 0, 0, 0, 1, 0, 0, 0, 18.5282, 0, 0, 0)
@@ -269,10 +266,3 @@ use_collision = true
 collision_layer = 3
 collision_mask = 3
 size = Vector3(0.5, 1, 0.5)
-
-[node name="Area3D" type="Area3D" parent="."]
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-shape = SubResource("BoxShape3D_f6kab")
