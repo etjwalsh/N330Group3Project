@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://dluamg0giw5ta"]
+
+[ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_bhkhg"]
+[ext_resource type="Texture2D" uid="uid://b6ycybiy0j48r" path="res://Images/playerTest.png" id="2_p626k"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_xkxev"]
+height = 1.0
+radius = 0.1
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_og2xa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_p626k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_bhkhg")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766044, 0, -0.766044, 0.642788, 0.729536, 13.1099, 8.79718)
+current = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_xkxev")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+pixel_size = 0.016
+billboard = 1
+sprite_frames = SubResource("SpriteFrames_og2xa")
+
+[node name="DashTimer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[node name="DashCooldown" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
+[connection signal="timeout" from="DashCooldown" to="." method="_on_dash_cooldown_timeout"]
