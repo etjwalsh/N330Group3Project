@@ -76,17 +76,6 @@ func _process(delta: float) -> void:
 		weapon += 1
 		if(weapon >= weaponNum):
 			weapon = 0
-	
-	#roll system
-	"""
-	if(Input.is_action_just_pressed("dash"))
-		if canDash:
-			$DashTimer.start()
-			SPEED += 35.0
-			canDash = false
-			$AnimatedSprite3D.modulate = Color(0, 1, 1) # REMOVE LATER
-	"""
-	#dash system (lines 90 to 101)
 	if(Input.is_action_pressed("dash")):
 		PlayerAutoload.energy -= energyUse * delta
 		if(PlayerAutoload.energy < 0):

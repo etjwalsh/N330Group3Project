@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dlc7f4np3qkgc"]
+[gd_scene load_steps=7 format=3 uid="uid://dlc7f4np3qkgc"]
 
 [ext_resource type="PackedScene" uid="uid://b1jhi8vl0d1v1" path="res://Scenes/Map/DefaultFloor/default_floor.tscn" id="1_q4vfh"]
 
@@ -15,6 +15,9 @@ sky = SubResource("Sky_qofd2")
 tonemap_mode = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_pqmfm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f6kab"]
+size = Vector3(100, 100, 100)
 
 [node name="Map" type="Node3D"]
 transform = Transform3D(19.6845, 0, 0, 0, 1, 0, 0, 0, 18.5282, 0, 0, 0)
@@ -258,3 +261,18 @@ transform = Transform3D(0.0630196, 0, 0, 0, 0.900933, 0, 0, 0, 0.592046, -0.4762
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Walls/Node3D16"]
 transform = Transform3D(1, 0, 0, 0, 1, 1.39602e-07, 0, -1.74846e-07, 0.798431, 0.155682, 0.83704, 0.0622308)
 mesh = SubResource("BoxMesh_pqmfm")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.487)
+layers = 3
+use_collision = true
+collision_layer = 3
+collision_mask = 3
+size = Vector3(0.5, 1, 0.5)
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_f6kab")
