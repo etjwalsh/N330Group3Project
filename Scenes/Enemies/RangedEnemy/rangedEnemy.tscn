@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgxsj3tkdckl5"]
+
+[ext_resource type="Script" path="res://Scenes/Enemies/RangedEnemy/rangedEnemy.gd" id="1_glxnk"]
+[ext_resource type="Texture2D" uid="uid://b6ycybiy0j48r" path="res://Images/playerTest.png" id="2_iy3f7"]
+
+[node name="RangedEnemy" type="Node3D"]
+script = ExtResource("1_glxnk")
+
+[node name="EnemySprite" type="Sprite3D" parent="."]
+transform = Transform3D(2.04758, 0, 0, 0, 2.04758, 0, 0, 0, 1, 0, 0, 0)
+texture = ExtResource("2_iy3f7")

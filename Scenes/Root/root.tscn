@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dymc3aycnuoih"]
+[gd_scene load_steps=5 format=3 uid="uid://dymc3aycnuoih"]
 
 [ext_resource type="PackedScene" uid="uid://cj4dso2g8m4he" path="res://Scenes/Player/player.tscn" id="1_3608u"]
 [ext_resource type="PackedScene" uid="uid://dlc7f4np3qkgc" path="res://Scenes/Map/map.tscn" id="2_nqqoq"]
 [ext_resource type="PackedScene" uid="uid://oyrqnsxs47ag" path="res://Scenes/UI/ui.tscn" id="3_tb5d4"]
+[ext_resource type="PackedScene" uid="uid://dgxsj3tkdckl5" path="res://Scenes/Enemies/RangedEnemy/rangedEnemy.tscn" id="4_1grcp"]
 
 [node name="Root" type="Node"]
 
@@ -13,3 +14,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0413322, 0.999998, -0.03425
 transform = Transform3D(20.5667, 0, 0, 0, 1, 0, 0, 0, 18.9019, -0.114811, -0.0411806, -0.250698)
 
 [node name="UI" parent="." instance=ExtResource("3_tb5d4")]
+
+[node name="RangedEnemy" parent="." instance=ExtResource("4_1grcp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.373127, 2.05752, -17.2017)

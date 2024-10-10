@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bc332ak1t3suv"]
+
+[ext_resource type="Script" path="res://Scenes/Bullets/RangedEnemyBullet/ranged_enemy_bullet.gd" id="1_cx8w5"]
+[ext_resource type="Texture2D" uid="uid://co60v2awdqkal" path="res://Images/smileyBullet.png" id="2_o8jo8"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_y0w50"]
+radius = 0.172123
+
+[node name="RangedEnemyBullet" type="RigidBody3D"]
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1_cx8w5")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+pixel_size = 0.05
+texture = ExtResource("2_o8jo8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_y0w50")
