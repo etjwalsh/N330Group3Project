@@ -1,11 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://btgap1d50aldt"]
+[gd_scene load_steps=4 format=3 uid="uid://btgap1d50aldt"]
 
 [ext_resource type="Script" path="res://Scenes/Bullets/PlayerLaser/player_laser.gd" id="1_sukx7"]
 [ext_resource type="Texture2D" uid="uid://v021hckdjtol" path="res://Images/LaserSprite.png" id="1_ufemg"]
 
-[node name="PlayerLaser" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_3tms4"]
+size = Vector3(0.32, 1, 0.32)
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
+[node name="PlayerLaser" type="RigidBody3D"]
+collision_layer = 2
+collision_mask = 0
+axis_lock_linear_y = true
+
+[node name="Sprite3D" type="Sprite3D" parent="." node_paths=PackedStringArray("shape")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 texture = ExtResource("1_ufemg")
 script = ExtResource("1_sukx7")
+shape = NodePath("../CollisionShape3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_3tms4")
