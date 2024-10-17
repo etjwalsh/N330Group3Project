@@ -93,11 +93,3 @@ func _process(delta: float) -> void:
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouse:
 		weaponRotation = -Vector2(960, 540).angle_to_point(event.position) + PI/2
-
-func _on_dash_timer_timeout() -> void:
-	speed = 15
-	$DashCooldown.start()
-	$AnimatedSprite3D.modulate = Color(1, 1, 1) # REMOVE LATER
-
-func _on_dash_cooldown_timeout() -> void:
-	canDash = true

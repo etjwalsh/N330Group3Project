@@ -6,7 +6,10 @@
 script/source = "extends RigidBody3D
 
 const speed = 25
+
 var time = 0
+
+@export var damage = 1
 
 func _ready() -> void:
 	linear_velocity.z = cos(rotation.y) * speed
@@ -17,7 +20,11 @@ func _process(delta: float) -> void:
 	if(time > 2):
 		queue_free()
 	
-	if(get_colliding_bodies()):
+	var bodies = get_colliding_bodies()
+	if(bodies):
+		for i in bodies:
+			if(\"health\" in i):
+				i.health -= damage
 		queue_free()
 "
 

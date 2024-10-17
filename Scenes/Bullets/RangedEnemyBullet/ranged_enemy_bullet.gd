@@ -2,6 +2,7 @@ extends RigidBody3D
 
 @export var bulletSpeed = 25
 var time = 0
+var damage = 1
 
 func _physics_process(delta: float) -> void:
 	position.z += cos(rotation.y) * delta * bulletSpeed
@@ -11,5 +12,9 @@ func _physics_process(delta: float) -> void:
 	if(time > 2):
 		queue_free()
 	
-	if(get_colliding_bodies()):
+	var bodies = get_colliding_bodies()
+	if(bodies):
+		for i in bodies:
+			if("health" in i):
+				i.health -= damage
 		queue_free()
