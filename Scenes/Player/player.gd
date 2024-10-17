@@ -42,6 +42,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		velocity.z = move_toward(velocity.z, 0, speed)
 	move_and_slide()
+	PlayerAutoload.pos = position
 
 func _process(delta: float) -> void:
 	if(Input.is_action_pressed("use")):

@@ -1,6 +1,6 @@
 extends RigidBody3D
 
-var bulletSpeed = 25
+@export var bulletSpeed = 25
 var time = 0
 
 func _physics_process(delta: float) -> void:
@@ -9,4 +9,7 @@ func _physics_process(delta: float) -> void:
 	
 	time += delta
 	if(time > 2):
+		queue_free()
+	
+	if(get_colliding_bodies()):
 		queue_free()

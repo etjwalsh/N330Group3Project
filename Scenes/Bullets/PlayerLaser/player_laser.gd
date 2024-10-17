@@ -7,7 +7,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if($RayCast3D.is_colliding()):
-		print(global_position)
+		
 		$Sprite3D.scale.y = global_position.distance_to($RayCast3D.get_collision_point()) * 3
 		$CollisionShape3D.scale.y = global_position.distance_to($RayCast3D.get_collision_point()) * 3
 		$Sprite3D.position.z = global_position.distance_to($RayCast3D.get_collision_point()) * 48 / 100

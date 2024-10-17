@@ -16,4 +16,4 @@ transform = Transform3D(20.5667, 0, 0, 0, 1, 0, 0, 0, 18.9019, -0.114811, -0.041
 [node name="UI" parent="." instance=ExtResource("3_tb5d4")]
 
 [node name="RangedEnemy" parent="." instance=ExtResource("4_1grcp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.373127, 2.05752, -17.2017)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.373, 1, -17.202)

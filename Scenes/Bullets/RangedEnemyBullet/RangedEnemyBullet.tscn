@@ -1,19 +1,24 @@
 [gd_scene load_steps=4 format=3 uid="uid://bc332ak1t3suv"]
 
 [ext_resource type="Script" path="res://Scenes/Bullets/RangedEnemyBullet/ranged_enemy_bullet.gd" id="1_cx8w5"]
-[ext_resource type="Texture2D" uid="uid://co60v2awdqkal" path="res://Images/smileyBullet.png" id="2_o8jo8"]
+[ext_resource type="Texture2D" uid="uid://du2paj73gf2sg" path="res://Images/EnemyBullet.png" id="2_fwp3w"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_y0w50"]
-radius = 0.172123
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_sm1sk"]
+height = 1.0
+radius = 0.1
 
 [node name="RangedEnemyBullet" type="RigidBody3D"]
+collision_layer = 0
+collision_mask = 3
+axis_lock_linear_y = true
 contact_monitor = true
 max_contacts_reported = 1
 script = ExtResource("1_cx8w5")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-pixel_size = 0.05
-texture = ExtResource("2_o8jo8")
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+pixel_size = 0.08
+texture = ExtResource("2_fwp3w")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("SphereShape3D_y0w50")
+shape = SubResource("CylinderShape3D_sm1sk")
