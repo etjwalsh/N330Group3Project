@@ -19,7 +19,6 @@ func _process(delta: float) -> void:
 		get_parent().queue_free()
 	
 	var bodies = get_colliding_bodies()
-	print(get_colliding_bodies())
 	if(bodies):
 		for i in bodies:
 			var hit = false

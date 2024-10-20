@@ -8,10 +8,11 @@ var weapon = 0
 
 const wideshotAngle = PI/8
 const wideshotBuffMax = .08
-const energyUse = 200
+const energyUse = 100
 const energyGain = 100
-const dashSpeed = 30.0
-const walkSpeed = 15.0
+const energyLag = .5
+const dashSpeed = 18
+const walkSpeed = 8
 
 var bulletSpawn = .516
 var wideshotBuffer = 0
@@ -21,6 +22,8 @@ var laserIns
 var swordIns
 var speed = walkSpeed
 var canDash = true
+var energyLagTimer = 0
+var energyUsed = false
 
 const bullet = preload("res://Scenes/Bullets/PlayerBullet/player_bullet.tscn")
 const laser = preload("res://Scenes/Bullets/PlayerLaser/player_laser.tscn")
@@ -79,15 +82,22 @@ func _process(delta: float) -> void:
 			weapon = 0
 	if(Input.is_action_pressed("dash")):
 		PlayerAutoload.energy -= energyUse * delta
+		energyUsed = true
 		if(PlayerAutoload.energy < 0):
 			PlayerAutoload.energy = 0
 			speed = walkSpeed
 		else:
 			speed = dashSpeed
 	else:
-		PlayerAutoload.energy += energyGain * delta
-		if(PlayerAutoload.energy > 100):
-			PlayerAutoload.energy = 100
+		if(energyUsed):
+			energyLagTimer = energyLag
+			energyUsed = false
+		if(energyLagTimer > 0):
+			energyLagTimer -= delta
+		else:
+			PlayerAutoload.energy += energyGain * delta
+			if(PlayerAutoload.energy > 100):
+				PlayerAutoload.energy = 100
 		speed = walkSpeed
 
 func _input(event: InputEvent) -> void:

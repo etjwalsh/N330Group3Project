@@ -11,10 +11,9 @@ func _physics_process(delta: float) -> void:
 	time += delta
 	if(time > 2):
 		queue_free()
-	
-	var bodies = get_colliding_bodies()
-	if(bodies):
-		for i in bodies:
-			if("health" in i):
-				i.health -= damage
-		queue_free()
+
+
+func _on_body_entered(body: Node) -> void:
+	if("health" in body):
+		body.health -= damage
+	queue_free()
