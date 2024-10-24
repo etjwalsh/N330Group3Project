@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://cv3hu8ycaqdij"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vliia"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4f7nx"]
+
+[node name="Room" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_vliia")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4f7nx")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.40651e-06, 0, 6.63477, 0, 5.49419, 0, -100.809, 0, -2.90015e-07, -46.9202, 2.49961, -0.554585)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+transform = Transform3D(-93.0705, 0, -5.8003e-07, 0, 5.49419, 0, 8.13649e-06, 0, -6.63477, 3.04738, 2.49961, 46.4158)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="."]
+transform = Transform3D(-87.5427, 0, -5.8003e-07, 0, 5.49419, 0, 7.65323e-06, 0, -6.63477, 0.547281, 2.49961, -46.7057)
