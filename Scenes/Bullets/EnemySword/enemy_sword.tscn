@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://crpn6nm882bhy"]
+
+[ext_resource type="Texture2D" uid="uid://c8qlhtnc8yhnj" path="res://Images/EnemySword.png" id="1_un2nv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_myf6b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_un2nv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_dqmhy"]
+radius = 0.25
+
+[node name="EnemySword" type="RigidBody3D"]
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+sprite_frames = SubResource("SpriteFrames_myf6b")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_dqmhy")

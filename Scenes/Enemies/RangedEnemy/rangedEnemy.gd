@@ -48,6 +48,7 @@ func _process(delta: float) -> void:
 				enemyBulletIns.rotation.y = dir + ((i - floor(bulletNum / 2)) * spread)
 				enemyBulletIns.bulletSpeed = bulletSpeed
 				enemyBulletIns.position += enemyBulletIns.basis.z * (1 - (abs((bulletNum / 2) - i))) * bulletSpreadDist
+				
 				enemyBulletIns.position += enemyBulletIns.basis.x * (i - floor(bulletNum / 2.0)) * bulletSpreadDist
 				add_child(enemyBulletIns)
 	
