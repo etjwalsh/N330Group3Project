@@ -1,14 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dymc3aycnuoih"]
+[gd_scene load_steps=7 format=3 uid="uid://dymc3aycnuoih"]
 
 [ext_resource type="PackedScene" uid="uid://cj4dso2g8m4he" path="res://Scenes/Player/player.tscn" id="1_3608u"]
 [ext_resource type="PackedScene" uid="uid://dlc7f4np3qkgc" path="res://Scenes/Map/map.tscn" id="2_nqqoq"]
 [ext_resource type="PackedScene" uid="uid://oyrqnsxs47ag" path="res://Scenes/UI/ui.tscn" id="3_tb5d4"]
 [ext_resource type="PackedScene" uid="uid://dgxsj3tkdckl5" path="res://Scenes/Enemies/RangedEnemy/rangedEnemy.tscn" id="4_1grcp"]
-<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://cv3hu8ycaqdij" path="res://Scenes/rooms/room.tscn" id="5_ltgwf"]
-=======
 [ext_resource type="PackedScene" uid="uid://cu7dp837sb68w" path="res://Scenes/Enemies/MeleeEnemy/MeleeEnemy.tscn" id="5_mbxqv"]
->>>>>>> 7bf4a7157f71042042c88ba76aaba2be48bebe38
 
 [node name="Root" type="Node"]
 
@@ -21,14 +18,10 @@ transform = Transform3D(20.5667, 0, 0, 0, 1, 0, 0, 0, 18.9019, -0.115, 0, -0.251
 [node name="UI" parent="." instance=ExtResource("3_tb5d4")]
 
 [node name="RangedEnemy" parent="." instance=ExtResource("4_1grcp")]
-<<<<<<< HEAD
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.373, 1, -17.202)
 
 [node name="Room" parent="." instance=ExtResource("5_ltgwf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 631.347, 81.6042, 0)
-=======
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0.5, 15)
 
 [node name="MeleeEnemy" parent="." instance=ExtResource("5_mbxqv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -15)
->>>>>>> 7bf4a7157f71042042c88ba76aaba2be48bebe38
