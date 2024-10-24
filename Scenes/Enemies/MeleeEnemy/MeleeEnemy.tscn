@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cu7dp837sb68w"]
+
+[ext_resource type="Script" path="res://Scenes/Enemies/MeleeEnemy/melee_enemy.gd" id="1_j6pml"]
+[ext_resource type="Texture2D" uid="uid://b6ycybiy0j48r" path="res://Images/playerTest.png" id="2_u2itq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oc8t3"]
+size = Vector3(1.3, 1, 1.3)
+
+[node name="MeleeEnemy" type="RigidBody3D"]
+rotation_edit_mode = 2
+collision_layer = 4
+axis_lock_linear_y = true
+script = ExtResource("1_j6pml")
+
+[node name="EnemySprite" type="Sprite3D" parent="."]
+transform = Transform3D(2.04758, 0, 0, 0, 2.04758, 0, 0, 0, 1, 0, 0.5, 0)
+modulate = Color(1, 0, 0, 1)
+billboard = 1
+texture = ExtResource("2_u2itq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_oc8t3")

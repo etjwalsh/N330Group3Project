@@ -12,7 +12,6 @@ func _physics_process(delta: float) -> void:
 	if(time > 2):
 		queue_free()
 
-
 func _on_body_entered(body: Node) -> void:
 	if("health" in body):
 		body.health -= damage
