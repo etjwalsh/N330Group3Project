@@ -258,10 +258,3 @@ transform = Transform3D(0.0630196, 0, 0, 0, 0.900933, 0, 0, 0, 0.592046, -0.4762
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Walls/Node3D16"]
 transform = Transform3D(1, 0, 0, 0, 1, 1.39602e-07, 0, -1.74846e-07, 0.798431, 0.155682, 0.83704, 0.0622308)
 mesh = SubResource("BoxMesh_pqmfm")
-
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.487)
-layers = 3
-use_collision = true
-collision_mask = 0
-size = Vector3(0.5, 1, 0.5)

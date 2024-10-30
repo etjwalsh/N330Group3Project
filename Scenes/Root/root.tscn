@@ -19,13 +19,13 @@ transform = Transform3D(20.5667, 0, 0, 0, 1, 0, 0, 0, 18.9019, -0.115, 0, -0.251
 [node name="UI" parent="." instance=ExtResource("3_tb5d4")]
 
 [node name="RangedEnemy" parent="." instance=ExtResource("4_1grcp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.373, 1, -17.202)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.373, 0.5, -17.202)
 
 [node name="Room" parent="." instance=ExtResource("5_ltgwf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0.5, 15)
 
 [node name="MeleeEnemy" parent="." instance=ExtResource("5_mbxqv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 1.22574, -15)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0.5, -15)
 
 [node name="swordArmPickup" parent="." instance=ExtResource("7_jbswk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3.24699, -7)

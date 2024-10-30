@@ -6,17 +6,18 @@ const swordTimer = 1.5
 const hitstun = 1
 const moveUpdate = 1
 const speed = 10
-const swingDist = 5
+const swingDist = 3
+const windup = .5
 
 var health = 5
-var time = 0
+var time = moveUpdate
 var prevTime = 0
 var enemyBulletIns
 var swordHit = false
 var hitstunTimer = 0
 var aiMode = still
 
-enum {still, charge}
+enum {still, charge, attack, swing}
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -24,8 +25,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	
-	time += delta
 	
 	if(swordHit):
 		hitstunTimer += delta
@@ -37,15 +36,17 @@ func _process(delta: float) -> void:
 	if(health <= 0):
 		queue_free()
 	
-	if(fmod(time, moveUpdate) < fmod(prevTime, moveUpdate)):
-		aiMode = charge
-	
 	match(aiMode):
 		still:
+			time -= delta
+			if(time <= 0):
+				aiMode = charge
 			linear_velocity = Vector3.ZERO
 		charge:
 			if(swordHit):
 				aiMode = still
+				time = moveUpdate
+				linear_velocity = Vector3.ZERO
 			else:
 				if(abs(position - PlayerAutoload.pos).length() > swingDist):
 					var dist = position.direction_to(PlayerAutoload.pos) * speed
@@ -53,5 +54,26 @@ func _process(delta: float) -> void:
 					linear_velocity = dist
 				else:
 					linear_velocity = Vector3.ZERO
+					aiMode = attack
+					time = windup
+		attack:
+			if(swordHit):
+				aiMode = still
+				time = moveUpdate
+				linear_velocity = Vector3.ZERO
+			else:
+				time -= delta
+				if(time <= 0):
+					aiMode = swing
+				else:
+					linear_velocity = Vector3.ZERO
+		swing:
+			enemyBulletIns = sword.instantiate()
+			var direction = position.direction_to(PlayerAutoload.pos)
+			enemyBulletIns.rotation.y = -Vector2(direction.x, direction.z).angle() + PI/2
+			enemyBulletIns.position.y += .5
+			add_child(enemyBulletIns)
+			aiMode = still
+			time = moveUpdate
 	
 	prevTime = time

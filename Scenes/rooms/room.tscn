@@ -18,9 +18,12 @@ skeleton = NodePath("../CollisionShape3D")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="."]
 transform = Transform3D(-4.40651e-06, 0, 6.63477, 0, 5.49419, 0, -100.809, 0, -2.90015e-07, -46.9202, 2.49961, -0.554585)
+use_collision = true
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="."]
 transform = Transform3D(-93.0705, 0, -5.8003e-07, 0, 5.49419, 0, 8.13649e-06, 0, -6.63477, 3.04738, 2.49961, 46.4158)
+use_collision = true
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="."]
 transform = Transform3D(-87.5427, 0, -5.8003e-07, 0, 5.49419, 0, 7.65323e-06, 0, -6.63477, 0.547281, 2.49961, -46.7057)
+use_collision = true

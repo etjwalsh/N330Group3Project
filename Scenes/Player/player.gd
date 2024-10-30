@@ -30,10 +30,6 @@ const laser = preload("res://Scenes/Bullets/PlayerLaser/player_laser.tscn")
 const sword = preload("res://Scenes/Bullets/PlayerSword/player_sword.tscn")
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir := Input.get_vector("left", "right", "up", "down")
@@ -44,8 +40,8 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		velocity.z = move_toward(velocity.z, 0, speed)
-	move_and_slide()
 	PlayerAutoload.pos = position
+	move_and_slide()
 
 func _process(delta: float) -> void:
 	if(Input.is_action_pressed("use")):

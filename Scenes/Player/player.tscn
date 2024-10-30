@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b6ycybiy0j48r" path="res://Images/playerTest.png" id="1_qlfjr"]
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_s4hq0"]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_xkxev"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_1ill4"]
 height = 1.0
 radius = 0.3
 
@@ -21,6 +21,9 @@ animations = [{
 [node name="Player" type="CharacterBody3D"]
 collision_layer = 2
 axis_lock_linear_y = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
 script = ExtResource("1_s4hq0")
 
 [node name="Camera3D" type="Camera3D" parent="."]
@@ -28,7 +31,7 @@ transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766044, 0, -0.766044, 0.642788, 
 current = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("CylinderShape3D_xkxev")
+shape = SubResource("CylinderShape3D_1ill4")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 pixel_size = 0.016
