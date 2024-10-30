@@ -1,4 +1,4 @@
-extends RigidBody3D
+extends Area3D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -10,8 +10,11 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
-func _on_area_3d_body_entered(body: Node3D) -> void:
-	if body.name == "player":
-		print_debug("body = ", body)
+#function for picking up the sword object
+func _on_body_entered(body: Node3D) -> void:
+	#check if the body that entered the area is the player
+	if body.name == "Player":
+		#enable the sword arm on the player script
+		
+		#delete the sword object
 		queue_free()

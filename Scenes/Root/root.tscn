@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dgxsj3tkdckl5" path="res://Scenes/Enemies/RangedEnemy/rangedEnemy.tscn" id="4_1grcp"]
 [ext_resource type="PackedScene" uid="uid://cv3hu8ycaqdij" path="res://Scenes/rooms/room.tscn" id="5_ltgwf"]
 [ext_resource type="PackedScene" uid="uid://cu7dp837sb68w" path="res://Scenes/Enemies/MeleeEnemy/MeleeEnemy.tscn" id="5_mbxqv"]
-[ext_resource type="PackedScene" uid="uid://dh7lcci0efv2c" path="res://Scenes/Bullets/PlayerSword/sword_arm_pickup.tscn" id="7_jbswk"]
+[ext_resource type="PackedScene" uid="uid://8r57k5rrkbrs" path="res://Scenes/Bullets/PlayerSword/sword_arm_pickup.tscn" id="7_jbswk"]
 
 [node name="Root" type="Node"]
 
@@ -27,5 +27,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0.5, 15)
 [node name="MeleeEnemy" parent="." instance=ExtResource("5_mbxqv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0.5, -15)
 
-[node name="swordArmPickup" parent="." instance=ExtResource("7_jbswk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3.24699, -7)
+[node name="Node3D" parent="." instance=ExtResource("7_jbswk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.225305, 1.77367, -4.78)
