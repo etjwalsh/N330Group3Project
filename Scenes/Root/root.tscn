@@ -27,5 +27,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0.5, 15)
 [node name="MeleeEnemy" parent="." instance=ExtResource("5_mbxqv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0.5, -15)
 
-[node name="Node3D" parent="." instance=ExtResource("7_jbswk")]
+[node name="SwordArmPickup" parent="." instance=ExtResource("7_jbswk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.225305, 1.77367, -4.78)
