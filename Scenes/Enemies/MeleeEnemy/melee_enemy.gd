@@ -68,12 +68,13 @@ func _process(delta: float) -> void:
 				else:
 					linear_velocity = Vector3.ZERO
 		swing:
-			enemyBulletIns = sword.instantiate()
-			var direction = position.direction_to(PlayerAutoload.pos)
-			enemyBulletIns.rotation.y = -Vector2(direction.x, direction.z).angle() + PI/2
-			enemyBulletIns.position.y += .5
-			add_child(enemyBulletIns)
-			aiMode = still
-			time = moveUpdate
+			if(!is_instance_valid(enemyBulletIns)):
+				enemyBulletIns = sword.instantiate()
+				var direction = position.direction_to(PlayerAutoload.pos)
+				enemyBulletIns.rotation.y = -Vector2(direction.x, direction.z).angle() + PI/2
+				enemyBulletIns.position.y += .5
+				add_child(enemyBulletIns)
+				aiMode = still
+				time = moveUpdate
 	
 	prevTime = time
