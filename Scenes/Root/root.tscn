@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dymc3aycnuoih"]
+[gd_scene load_steps=8 format=3 uid="uid://dymc3aycnuoih"]
 
 [ext_resource type="PackedScene" uid="uid://cj4dso2g8m4he" path="res://Scenes/Player/player.tscn" id="1_3608u"]
 [ext_resource type="PackedScene" uid="uid://b1iwn056f2uj0" path="res://Levels/TestLevel/test_level.tscn" id="3_df804"]
@@ -16,6 +16,9 @@ background_mode = 2
 sky = SubResource("Sky_qofd2")
 tonemap_mode = 2
 
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_nv0hh"]
+plane = Plane(0, 0, 0, 0)
+
 [node name="Root" type="Node"]
 
 [node name="Player" parent="." instance=ExtResource("1_3608u")]
@@ -27,3 +30,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.041, 1, -0.034)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_a48tf")
+
+[node name="floorCollision" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floorCollision"]
+shape = SubResource("WorldBoundaryShape3D_nv0hh")

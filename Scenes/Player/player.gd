@@ -25,9 +25,6 @@ var canDash = true
 var energyLagTimer = 0
 var energyUsed = false
 
-var swordUsable = false
-var laserUsable = false
-
 const bullet = preload("res://Scenes/Bullets/PlayerBullet/player_bullet.tscn")
 const laser = preload("res://Scenes/Bullets/PlayerLaser/player_laser.tscn")
 const sword = preload("res://Scenes/Bullets/PlayerSword/player_sword.tscn")
@@ -63,14 +60,14 @@ func _process(delta: float) -> void:
 				if(wideshotBuffer >= wideshotBuffMax):
 					wideshotBuffer = 0
 			1:
-				if(laserUsable == false):
+				if(PlayerAutoload.laserUsable == false):
 					weapon = 2
 				if(!is_instance_valid(laserIns)):
 					laserIns = laser.instantiate()
 					add_child(laserIns)
 				laserIns.rotation.y = weaponRotation
 			2:
-				if(swordUsable == false):
+				if(PlayerAutoload.swordUsable == false):
 					weapon = 0
 				if(!is_instance_valid(swordIns)):
 					swordIns = sword.instantiate()
