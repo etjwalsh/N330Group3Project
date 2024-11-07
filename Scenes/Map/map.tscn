@@ -1,23 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dlc7f4np3qkgc"]
+[gd_scene load_steps=2 format=3 uid="uid://dlc7f4np3qkgc"]
 
 [ext_resource type="PackedScene" uid="uid://b1jhi8vl0d1v1" path="res://Scenes/Map/DefaultFloor/default_floor.tscn" id="1_q4vfh"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dbt7l"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-
-[sub_resource type="Sky" id="Sky_qofd2"]
-sky_material = SubResource("ProceduralSkyMaterial_dbt7l")
-
-[sub_resource type="Environment" id="Environment_jse8b"]
-background_mode = 2
-sky = SubResource("Sky_qofd2")
-tonemap_mode = 2
-
 [node name="Map" type="Node3D"]
 transform = Transform3D(19.6845, 0, 0, 0, 1, 0, 0, 0, 18.5282, 0, 0, 0)
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_jse8b")
 
 [node name="DefaultFloor" parent="." instance=ExtResource("1_q4vfh")]
