@@ -24,6 +24,7 @@ var speed = walkSpeed
 var canDash = true
 var energyLagTimer = 0
 var energyUsed = false
+var health = 5 
 
 const bullet = preload("res://Scenes/Bullets/PlayerBullet/player_bullet.tscn")
 const laser = preload("res://Scenes/Bullets/PlayerLaser/player_laser.tscn")
@@ -44,6 +45,8 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 
 func _process(delta: float) -> void:
+	PlayerAutoload.health = health
+	
 	#print_debug(swordUsable)
 	if(Input.is_action_pressed("use")):
 		match(weapon):
