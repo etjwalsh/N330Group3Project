@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlc7f4np3qkgc"]
-
-[ext_resource type="PackedScene" uid="uid://b1jhi8vl0d1v1" path="res://Scenes/Map/DefaultFloor/default_floor.tscn" id="1_q4vfh"]
-
-[node name="Map" type="Node3D"]
-transform = Transform3D(19.6845, 0, 0, 0, 1, 0, 0, 0, 18.5282, 0, 0, 0)
-
-[node name="DefaultFloor" parent="." instance=ExtResource("1_q4vfh")]

@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://briypamsbptwe"]
-
-[ext_resource type="PackedScene" uid="uid://b1jhi8vl0d1v1" path="res://Scenes/Map/DefaultFloor/default_floor.tscn" id="1_n3myt"]
-
-[node name="SeanLevel" type="Node3D"]
-
-[node name="Floor" parent="." instance=ExtResource("1_n3myt")]

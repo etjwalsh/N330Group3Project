@@ -5,6 +5,6 @@ var health = 5
 
 var pos = Vector3.ZERO
 
-var laserUsable = false
+var laserUsable = true
 
 var swordUsable = false
