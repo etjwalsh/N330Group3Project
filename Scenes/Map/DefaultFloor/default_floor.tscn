@@ -7,7 +7,7 @@ plane = Plane(0, 0, 0, 0)
 size = Vector2(1, 1)
 
 [node name="Floor" type="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.264506, -0.00704432, 0.0184832)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.265, 0, 0.018)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("WorldBoundaryShape3D_hw20r")
