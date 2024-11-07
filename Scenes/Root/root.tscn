@@ -25,7 +25,7 @@ transform = Transform3D(20.5667, 0, 0, 0, 1, 0, 0, 0, 18.9019, -0.115, 0, -0.251
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.373, 1, -17.202)
 
 [node name="Room" parent="." instance=ExtResource("5_ltgwf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 631.347, 81.6042, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.72182, 0.00137711, -0.123821)
 
 [node name="SwordArmPickup" parent="." instance=ExtResource("6_p0u0r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -8)
