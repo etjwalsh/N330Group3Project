@@ -27,7 +27,7 @@ axis_lock_angular_z = true
 script = ExtResource("1_s4hq0")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766044, 0, -0.766044, 0.642788, 0.729536, 13.1099, 8.79718)
+transform = Transform3D(1, 0, 0, 0, 0.0871558, 0.996195, 0, -0.996195, 0.0871558, 0, 20, 1.5)
 current = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

@@ -1,0 +1,169 @@
+[gd_scene load_steps=8 format=3 uid="uid://bxpmoqobpv15w"]
+
+[ext_resource type="PackedScene" uid="uid://ctry3nif0to2c" path="res://Scenes/rooms/roomBridges.tscn" id="1_4r5l5"]
+[ext_resource type="PackedScene" uid="uid://drwkpo72wj8ju" path="res://Scenes/rooms/roomCentral.tscn" id="1_se44m"]
+[ext_resource type="PackedScene" uid="uid://bl1dqhkfdx7u5" path="res://Scenes/rooms/roomPlus.tscn" id="2_m6deq"]
+[ext_resource type="PackedScene" uid="uid://bnnph50n1okii" path="res://Scenes/rooms/roomSquare.tscn" id="2_wyutl"]
+[ext_resource type="PackedScene" uid="uid://caunmni0fqrmv" path="res://Scenes/rooms/roomPits.tscn" id="3_cgtuo"]
+[ext_resource type="PackedScene" uid="uid://y5bpssm607ps" path="res://Scenes/rooms/roomDoor.tscn" id="4_dkj2s"]
+[ext_resource type="PackedScene" uid="uid://cx4dnd68dmxo1" path="res://Scenes/rooms/roomHalls.tscn" id="6_cd4fi"]
+
+[node name="GameWorld" type="Node3D"]
+
+[node name="roomCentral" parent="." instance=ExtResource("1_se44m")]
+
+[node name="roomCentral2" parent="." instance=ExtResource("1_se44m")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -55)
+
+[node name="roomSquare" parent="." instance=ExtResource("2_wyutl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 0, -10)
+
+[node name="roomSquare3" parent="." instance=ExtResource("2_wyutl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 0, 25)
+
+[node name="roomSquare5" parent="." instance=ExtResource("2_wyutl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, -45)
+
+[node name="roomBridges" parent="." instance=ExtResource("1_4r5l5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 0, 25)
+
+[node name="roomBridges2" parent="." instance=ExtResource("1_4r5l5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, 0, -10)
+
+[node name="roomBridges3" parent="." instance=ExtResource("1_4r5l5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 0, -45)
+
+[node name="roomDoor" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 35)
+
+[node name="roomDoor3" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 0)
+
+[node name="roomDoor6" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -85, 0, 35)
+
+[node name="roomDoor7" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 0, 50)
+
+[node name="roomDoor2" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 0, 50)
+
+[node name="roomDoor10" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -85, 0, -35)
+
+[node name="roomDoor11" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 0, -50)
+
+[node name="roomDoor4" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -35)
+
+[node name="roomDoor5" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 0, -50)
+
+[node name="roomDoor17" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, -50)
+
+[node name="roomDoor18" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, -35)
+
+[node name="roomDoor19" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -35)
+
+[node name="roomDoor20" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 35)
+
+[node name="roomDoor21" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, 50)
+
+[node name="roomDoor22" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 50)
+
+[node name="roomDoor23" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 20)
+
+[node name="roomDoor24" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, 0, 50)
+
+[node name="roomDoor25" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 150, 0, 35)
+
+[node name="roomDoor26" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 110, 0, 0)
+
+[node name="roomDoor33" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -55)
+
+[node name="roomDoor34" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -55)
+
+[node name="roomDoor27" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, 0, -15)
+
+[node name="roomDoor28" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 160, 0, -15)
+
+[node name="roomDoor29" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 195, 0, -15)
+
+[node name="roomDoor30" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 210, 0, 0)
+
+[node name="roomDoor31" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 195, 0, 15)
+
+[node name="roomDoor32" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 160, 0, 15)
+
+[node name="roomPits" parent="." instance=ExtResource("3_cgtuo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 0, -45)
+
+[node name="roomPits3" parent="." instance=ExtResource("3_cgtuo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 25)
+
+[node name="roomHalls" parent="." instance=ExtResource("6_cd4fi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 0, -10)
+
+[node name="roomHalls2" parent="." instance=ExtResource("6_cd4fi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, 25)
+
+[node name="roomHalls3" parent="." instance=ExtResource("6_cd4fi")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 170, 0, 0)
+
+[node name="roomPlus" parent="." instance=ExtResource("2_m6deq")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -115, 0, 0)
+
+[node name="roomPlus2" parent="." instance=ExtResource("2_m6deq")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 45, 0, 0)
+
+[node name="roomPlus3" parent="." instance=ExtResource("2_m6deq")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 125, 0, 35)
+
+[node name="roomDoor8" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -140, 0, 0)
+
+[node name="roomDoor9" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -115, 0, -15)
+
+[node name="roomDoor14" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -150, 0, 20)
+
+[node name="roomDoor15" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -165, 0, 35)
+
+[node name="roomDoor16" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -150, 0, 50)
+
+[node name="roomDoor12" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, 35)
+
+[node name="roomDoor13" parent="." instance=ExtResource("4_dkj2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -115, 0, 50)
+
+[node name="roomPits2" parent="." instance=ExtResource("3_cgtuo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -115, 0, 25)
+
+[node name="roomSquare4" parent="." instance=ExtResource("2_wyutl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -150, 0, 25)
+
+[node name="roomSquare2" parent="." instance=ExtResource("2_wyutl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 195, 0, -10)

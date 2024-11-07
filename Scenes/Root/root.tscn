@@ -1,8 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://dymc3aycnuoih"]
 
 [ext_resource type="PackedScene" uid="uid://cj4dso2g8m4he" path="res://Scenes/Player/player.tscn" id="1_3608u"]
-[ext_resource type="PackedScene" uid="uid://b1iwn056f2uj0" path="res://Levels/TestLevel/test_level.tscn" id="3_df804"]
 [ext_resource type="PackedScene" uid="uid://oyrqnsxs47ag" path="res://Scenes/UI/ui.tscn" id="3_tb5d4"]
+[ext_resource type="PackedScene" uid="uid://bxpmoqobpv15w" path="res://Scenes/GameMap/gameWorld.tscn" id="4_m311a"]
+[ext_resource type="PackedScene" uid="uid://cu7dp837sb68w" path="res://Scenes/Enemies/MeleeEnemy/MeleeEnemy.tscn" id="9_f83i1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_px50p"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -16,22 +17,17 @@ background_mode = 2
 sky = SubResource("Sky_qofd2")
 tonemap_mode = 2
 
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_nv0hh"]
-plane = Plane(0, 0, 0, 0)
-
 [node name="Root" type="Node"]
 
 [node name="Player" parent="." instance=ExtResource("1_3608u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.041, 1, -0.034)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="UI" parent="." instance=ExtResource("3_tb5d4")]
 
-[node name="testLevel" parent="." instance=ExtResource("3_df804")]
+[node name="MeleeEnemy" parent="." instance=ExtResource("9_f83i1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15.0477)
+
+[node name="GameWorld" parent="." instance=ExtResource("4_m311a")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_a48tf")
-
-[node name="floorCollision" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="floorCollision"]
-shape = SubResource("WorldBoundaryShape3D_nv0hh")
