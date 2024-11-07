@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dymc3aycnuoih"]
+[gd_scene load_steps=11 format=3 uid="uid://dymc3aycnuoih"]
 
 [ext_resource type="PackedScene" uid="uid://cj4dso2g8m4he" path="res://Scenes/Player/player.tscn" id="1_3608u"]
 [ext_resource type="PackedScene" uid="uid://dlc7f4np3qkgc" path="res://Scenes/Map/map.tscn" id="2_nqqoq"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bf1gi41ens85q" path="res://Scenes/Bullets/PlayerLaser/laser_arm_pickup.tscn" id="7_tu35t"]
 [ext_resource type="PackedScene" uid="uid://da8mkmqlt8wv4" path="res://Scenes/Enemies/RangedEnemyStatic/ranged_enemy_static.tscn" id="8_hnudm"]
 [ext_resource type="PackedScene" uid="uid://cu7dp837sb68w" path="res://Scenes/Enemies/MeleeEnemy/MeleeEnemy.tscn" id="9_f83i1"]
+[ext_resource type="PackedScene" uid="uid://b6ak22ivg1sl6" path="res://Scenes/Enemies/RangedEnemy2/ranged_enemy_2.tscn" id="10_y3wrn"]
 
 [node name="Root" type="Node"]
 
@@ -37,3 +38,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9544, 0.5, -11.2381)
 
 [node name="MeleeEnemy" parent="." instance=ExtResource("9_f83i1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7933, -9.53674e-07, -31.5841)
+
+[node name="RangedEnemy2" parent="." instance=ExtResource("10_y3wrn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0.5, -10)

@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6ak22ivg1sl6"]
+
+[ext_resource type="PackedScene" uid="uid://dgxsj3tkdckl5" path="res://Scenes/Enemies/RangedEnemy/rangedEnemy.tscn" id="1_bhvh3"]
+[ext_resource type="Script" path="res://Scenes/Enemies/RangedEnemy2/rangedEnemy2.gd" id="2_od82s"]
+
+[node name="RangedEnemy2" instance=ExtResource("1_bhvh3")]
+script = ExtResource("2_od82s")
