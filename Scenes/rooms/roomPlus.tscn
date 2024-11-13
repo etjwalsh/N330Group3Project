@@ -1,12 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://bl1dqhkfdx7u5"]
+[gd_scene load_steps=6 format=3 uid="uid://bl1dqhkfdx7u5"]
+
+[ext_resource type="Material" uid="uid://daedd3rvnc4f6" path="res://Materials/Wood.tres" id="1_ltqo5"]
+[ext_resource type="Material" uid="uid://dp2hrxdoycxu2" path="res://Materials/Metal.tres" id="2_43dre"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_1oix6"]
+material = ExtResource("1_ltqo5")
 size = Vector3(5, 5, 5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jicr2"]
 size = Vector3(5, 5, 5)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_vfl2m"]
+material = ExtResource("2_43dre")
 size = Vector2(5, 5)
 
 [node name="roomPlus" type="Node3D"]
