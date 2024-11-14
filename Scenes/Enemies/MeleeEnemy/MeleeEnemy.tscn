@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://cu7dp837sb68w"]
+[gd_scene load_steps=5 format=3 uid="uid://cu7dp837sb68w"]
 
 [ext_resource type="Script" path="res://Scenes/Enemies/MeleeEnemy/melee_enemy.gd" id="1_j6pml"]
-[ext_resource type="Texture2D" uid="uid://b6ycybiy0j48r" path="res://Images/playerTest.png" id="2_u2itq"]
+[ext_resource type="PackedScene" uid="uid://kvvp8cbbdsgt" path="res://Animations/roboEnemy4_Melee.blend" id="2_0ijp6"]
+[ext_resource type="Texture2D" uid="uid://cyy858ujsf1eo" path="res://Images/littleShadow.png" id="3_nwfic"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_oc8t3"]
-size = Vector3(1.3, 1, 1.3)
+size = Vector3(2, 1, 2.4)
 
 [node name="MeleeEnemy" type="RigidBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
@@ -13,12 +14,13 @@ axis_lock_linear_y = true
 lock_rotation = true
 script = ExtResource("1_j6pml")
 
-[node name="EnemySprite" type="Sprite3D" parent="."]
-transform = Transform3D(2.04758, 0, 0, 0, 2.04758, 0, 0, 0, 1, 0, 0.5, 0)
-modulate = Color(1, 0, 0, 1)
-billboard = 1
-texture = ExtResource("2_u2itq")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0.858566, 0.5, -1.43947)
 shape = SubResource("BoxShape3D_oc8t3")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(3.46645, 0, 0, 0, -5.91806e-08, -1, 0, 1.35389, -4.37114e-08, 1.0944, 0.56751, 0.875021)
+texture = ExtResource("3_nwfic")
+
+[node name="roboEnemy4_Melee" parent="." instance=ExtResource("2_0ijp6")]
+transform = Transform3D(0.75, 0, 0, 0, 0.226453, 0.714996, 0, -0.714996, 0.226453, -1.50461, 0.606543, 0.646544)

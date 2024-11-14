@@ -1,8 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://b6ak22ivg1sl6"]
+[gd_scene load_steps=4 format=3 uid="uid://b6ak22ivg1sl6"]
 
 [ext_resource type="PackedScene" uid="uid://dgxsj3tkdckl5" path="res://Scenes/Enemies/RangedEnemy/rangedEnemy.tscn" id="1_bhvh3"]
 [ext_resource type="Script" path="res://Scenes/Enemies/RangedEnemy2/rangedEnemy2.gd" id="2_od82s"]
+[ext_resource type="PackedScene" uid="uid://bcx6s7bto0hw0" path="res://Animations/roboEnemy3_Shoot2.blend" id="3_cc1fr"]
 
 [node name="RangedEnemy2" instance=ExtResource("1_bhvh3")]
-lock_rotation = true
 script = ExtResource("2_od82s")
+
+[node name="roboEnemy2_Shoot1" parent="." index="1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.106677, 0.488487, 0, -0.488487, 0.106677, -1.26029, -8.17489, 0.659485)
+visible = false
+
+[node name="Sprite3D" parent="." index="2"]
+transform = Transform3D(1.87955, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.0842323, 0.353398, 1.01445)
+
+[node name="roboEnemy3_Shoot2" parent="." index="3" instance=ExtResource("3_cc1fr")]
+transform = Transform3D(0.6, 0, 0, 0, -2.62268e-08, 0.6, 0, -0.6, -2.62268e-08, -0.978333, 0.369838, 0.871236)
