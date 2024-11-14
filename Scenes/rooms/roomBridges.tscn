@@ -25,6 +25,54 @@ mesh = SubResource("BoxMesh_1oix6")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="wall2"]
 shape = SubResource("BoxShape3D_jicr2")
 
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+shape = SubResource("BoxShape3D_jicr2")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 5)
+shape = SubResource("BoxShape3D_jicr2")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 10)
+shape = SubResource("BoxShape3D_jicr2")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 25)
+shape = SubResource("BoxShape3D_jicr2")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 20)
+shape = SubResource("BoxShape3D_jicr2")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 25)
+shape = SubResource("BoxShape3D_jicr2")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 25)
+shape = SubResource("BoxShape3D_jicr2")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 25)
+shape = SubResource("BoxShape3D_jicr2")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 20)
+shape = SubResource("BoxShape3D_jicr2")
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 10)
+shape = SubResource("BoxShape3D_jicr2")
+
+[node name="CollisionShape3D12" type="CollisionShape3D" parent="wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 5)
+shape = SubResource("BoxShape3D_jicr2")
+
+[node name="CollisionShape3D13" type="CollisionShape3D" parent="wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 5)
+shape = SubResource("BoxShape3D_jicr2")
+
 [node name="wall3" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2.5, -5)
 
