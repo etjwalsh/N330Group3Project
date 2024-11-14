@@ -29,10 +29,10 @@ func _spawnEnemy():
 	spawnPosZ = randf_range($Area3D.position.y - 10, $Area3D.position.y + 10)
 	
 	var enemyToSpawnIns = enemyToSpawn.instantiate()
-	enemyToSpawnIns.position = Vector3(spawnPosX, spawnPosY, spawnPosZ)
+	enemyToSpawnIns.position = position + Vector3(spawnPosX, spawnPosY, spawnPosZ)
 	
 	if maxEnemies > 0:
-		add_child(enemyToSpawnIns)
+		get_parent().add_child(enemyToSpawnIns)
 		maxEnemies -= 1
 
 
