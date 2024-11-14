@@ -23,7 +23,7 @@ const bullet = preload("res://Scenes/Bullets/RangedEnemyBullet/RangedEnemyBullet
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$EnemySprite.modulate = Color(1, .44, .45)
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://dymc3aycnuoih"]
+[gd_scene load_steps=10 format=3 uid="uid://dymc3aycnuoih"]
 
 [ext_resource type="PackedScene" uid="uid://cj4dso2g8m4he" path="res://Scenes/Player/player.tscn" id="1_3608u"]
 [ext_resource type="PackedScene" uid="uid://oyrqnsxs47ag" path="res://Scenes/UI/ui.tscn" id="3_tb5d4"]
 [ext_resource type="PackedScene" uid="uid://bxpmoqobpv15w" path="res://Scenes/GameMap/gameWorld.tscn" id="4_m311a"]
 [ext_resource type="PackedScene" uid="uid://c44ii52tjfe1v" path="res://Scenes/Enemies/enemySpawner/enemySpawner.tscn" id="5_gwpmh"]
+[ext_resource type="PackedScene" uid="uid://dgxsj3tkdckl5" path="res://Scenes/Enemies/RangedEnemy/rangedEnemy.tscn" id="6_wwvu2"]
 [ext_resource type="PackedScene" uid="uid://cu7dp837sb68w" path="res://Scenes/Enemies/MeleeEnemy/MeleeEnemy.tscn" id="9_f83i1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_px50p"]
@@ -35,3 +36,6 @@ environment = SubResource("Environment_a48tf")
 
 [node name="EnemySpawner" parent="." instance=ExtResource("5_gwpmh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.4649, 0, -0.238998)
+
+[node name="RangedEnemy" parent="." instance=ExtResource("6_wwvu2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.12063, 0.5, 9.26113)
