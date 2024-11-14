@@ -20,7 +20,6 @@ tonemap_mode = 2
 [node name="Root" type="Node"]
 
 [node name="Player" parent="." instance=ExtResource("1_3608u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="UI" parent="." instance=ExtResource("3_tb5d4")]
 

@@ -1,22 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://cj4dso2g8m4he"]
+[gd_scene load_steps=6 format=3 uid="uid://cj4dso2g8m4he"]
 
-[ext_resource type="Texture2D" uid="uid://b6ycybiy0j48r" path="res://Images/playerTest.png" id="1_qlfjr"]
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_s4hq0"]
+[ext_resource type="PackedScene" uid="uid://c1egmh6jsglm7" path="res://Animations/Player/catModel13.blend" id="2_as53f"]
+[ext_resource type="Texture2D" uid="uid://cyy858ujsf1eo" path="res://Images/littleShadow.png" id="3_g75q1"]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_1ill4"]
-height = 1.0
-radius = 0.3
+[sub_resource type="BoxShape3D" id="BoxShape3D_28rm5"]
+size = Vector3(1, 1, 2.485)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_og2xa"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_qlfjr")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+[sub_resource type="SpriteFrames" id="SpriteFrames_kveap"]
 
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -28,13 +19,20 @@ axis_lock_angular_z = true
 script = ExtResource("1_s4hq0")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.0871558, 0.996195, 0, -0.996195, 0.0871558, 0, 20, 1.5)
+transform = Transform3D(1, 0, 0, 0, 0.34202, 0.939693, 0, -0.939693, 0.34202, 0, 13.557, 6.34511)
 current = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("CylinderShape3D_1ill4")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.206953, 0, -0.316925)
+shape = SubResource("BoxShape3D_28rm5")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
-pixel_size = 0.016
+transform = Transform3D(6.6874e-16, 1.5299e-08, -0.35, 0.35, -1.5299e-08, 0, -1.5299e-08, -0.35, -1.5299e-08, 0, 0, 0)
 billboard = 1
-sprite_frames = SubResource("SpriteFrames_og2xa")
+sprite_frames = SubResource("SpriteFrames_kveap")
+
+[node name="catModel13" parent="AnimatedSprite3D" instance=ExtResource("2_as53f")]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1.2, 0, 0, 0, -5.24537e-08, -1.2, 0, 1.2, -5.24537e-08, 0.147116, 0, 1.22325)
+texture = ExtResource("3_g75q1")
