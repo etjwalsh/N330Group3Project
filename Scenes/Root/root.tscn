@@ -36,6 +36,27 @@ environment = SubResource("Environment_a48tf")
 
 [node name="EnemySpawner" parent="." instance=ExtResource("5_gwpmh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.4649, 0, -0.238998)
+maxEnemies = 3
 
 [node name="RangedEnemy" parent="." instance=ExtResource("6_wwvu2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.12063, 0.5, 9.26113)
+
+[node name="EnemySpawner2" parent="." instance=ExtResource("5_gwpmh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.0304, 0, 0.176878)
+maxEnemies = 6
+
+[node name="EnemySpawner3" parent="." instance=ExtResource("5_gwpmh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.8773, 0, -34.5881)
+maxEnemies = 3
+
+[node name="EnemySpawner4" parent="." instance=ExtResource("5_gwpmh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 124.588, 0, 35.0274)
+maxEnemies = 7
+
+[node name="EnemySpawner5" parent="." instance=ExtResource("5_gwpmh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.7078, 0, 35.4768)
+maxEnemies = 3
+
+[node name="EnemySpawner6" parent="." instance=ExtResource("5_gwpmh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -115.956, 0, -0.0386868)
+maxEnemies = 6

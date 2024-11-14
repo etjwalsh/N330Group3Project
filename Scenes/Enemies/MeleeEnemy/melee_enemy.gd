@@ -4,7 +4,7 @@ const sword = preload("res://Scenes/Bullets/EnemySword/enemy_sword.tscn")
 
 const swordTimer = 1.5
 const hitstun = 1
-const moveUpdate = 1
+const moveUpdate = .5
 const speed = 10
 const swingDist = 3
 const windup = .5

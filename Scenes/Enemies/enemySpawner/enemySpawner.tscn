@@ -1,11 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://c44ii52tjfe1v"]
+[gd_scene load_steps=6 format=3 uid="uid://c44ii52tjfe1v"]
 
 [ext_resource type="Script" path="res://Scenes/Enemies/enemySpawner/enemy_spawner.gd" id="1_4mshn"]
+[ext_resource type="Texture2D" uid="uid://dvqp6deso7a78" path="res://Images/wood.png" id="2_86faa"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_wyuxp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_25tbo"]
-albedo_color = Color(1, 0.247059, 1, 1)
+albedo_texture = ExtResource("2_86faa")
 metallic = 1.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1md2q"]
