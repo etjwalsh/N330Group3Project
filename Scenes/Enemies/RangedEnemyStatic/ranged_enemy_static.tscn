@@ -12,4 +12,4 @@ script = ExtResource("2_mjn10")
 visible = false
 
 [node name="roboEnemy1_Circle" parent="." index="3" instance=ExtResource("3_hjjuk")]
-transform = Transform3D(-0.2, -1.66288e-08, -5.40302e-09, 0, 0.0618034, -0.190211, 1.74846e-08, -0.190211, -0.0618034, -1.55442, 0.498436, 0.870567)
+transform = Transform3D(0.2, 2.20318e-08, -1.12258e-08, -3.37508e-14, 0.0907979, 0.178201, 2.47269e-08, -0.178201, 0.0907979, 1.51773, 0.498436, 0.870567)
