@@ -15,4 +15,17 @@ visible = false
 transform = Transform3D(2.37765, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.314122, 0.353398, 1.01445)
 
 [node name="roboEnemy3_Shoot2" parent="." index="3" instance=ExtResource("3_cc1fr")]
-transform = Transform3D(0.75, 0, 0, 0, 0.256515, 0.704769, 0, -0.704769, 0.256515, -0.978333, 0.369838, 0.871236)
+transform = Transform3D(0.75, 0, 0, 0, 0.256515, 0.704769, 0, -0.704769, 0.256515, -0.978333, 0.432567, 0.828394)
+
+[node name="Skeleton3D" parent="roboEnemy3_Shoot2/Armature" index="0"]
+bones/1/rotation = Quaternion(6.71517e-08, -2.44788e-09, 0.0203493, 0.999793)
+bones/2/rotation = Quaternion(8.27033e-08, 6.43574e-08, -0.313853, 0.949472)
+bones/3/rotation = Quaternion(9.33104e-08, 7.03378e-08, -0.669555, 0.742763)
+bones/4/rotation = Quaternion(-8.89731e-08, 9.53412e-08, 0.360058, 0.93293)
+bones/6/rotation = Quaternion(7.66425e-08, -1.48176e-08, -0.833034, 0.553221)
+bones/7/rotation = Quaternion(-6.43699e-10, -2.05504e-08, 0.0144108, 0.999896)
+bones/9/rotation = Quaternion(1.80605e-08, -4.17526e-07, 0.555803, -0.831314)
+bones/10/rotation = Quaternion(-6.61797e-15, 1.30674e-14, -0.999913, 0.0131775)
+
+[editable path="roboEnemy2_Shoot1"]
+[editable path="roboEnemy3_Shoot2"]

@@ -23,6 +23,7 @@ const bullet = preload("res://Scenes/Bullets/RangedEnemyBullet/RangedEnemyBullet
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	get_node("roboEnemy2_Shoot1/AnimationPlayer").play("hoverMove")
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

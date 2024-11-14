@@ -12,4 +12,18 @@ script = ExtResource("2_mjn10")
 visible = false
 
 [node name="roboEnemy1_Circle" parent="." index="3" instance=ExtResource("3_hjjuk")]
-transform = Transform3D(0.2, 2.20318e-08, -1.12258e-08, -3.37508e-14, 0.0907979, 0.178201, 2.47269e-08, -0.178201, 0.0907979, 1.51773, 0.498436, 0.870567)
+transform = Transform3D(0.2, 2.20318e-08, -1.12258e-08, -3.37508e-14, 0.0907979, 0.178201, 2.47269e-08, -0.178201, 0.0907979, 1.50475, 0.498436, 1.1802)
+
+[node name="Skeleton3D" parent="roboEnemy1_Circle/Armature" index="0"]
+bones/0/position = Vector3(0.0163308, -0.0902345, 1.21238e-08)
+bones/2/rotation = Quaternion(3.6381e-11, -9.11982e-09, -0.00399092, 0.999992)
+bones/3/rotation = Quaternion(-1.16861e-08, 3.20974e-08, 0.799139, 0.601147)
+bones/4/rotation = Quaternion(-1.12135e-07, -1.47008e-07, -0.470346, 0.882482)
+bones/5/rotation = Quaternion(1.50042e-07, -5.23614e-08, 0.758457, 0.651723)
+bones/6/rotation = Quaternion(-6.4386e-08, 1.31787e-07, 0.583395, 0.812189)
+bones/8/rotation = Quaternion(3.00985e-07, 8.14267e-08, -0.572362, 0.820001)
+bones/9/rotation = Quaternion(-1.40673e-07, -1.05437e-07, 0.457189, 0.889369)
+bones/10/rotation = Quaternion(1.7076e-07, 2.01763e-07, -0.767557, 0.640981)
+
+[editable path="roboEnemy2_Shoot1"]
+[editable path="roboEnemy1_Circle"]

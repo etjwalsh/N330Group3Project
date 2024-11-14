@@ -24,3 +24,18 @@ texture = ExtResource("3_nwfic")
 
 [node name="roboEnemy4_Melee" parent="." instance=ExtResource("2_0ijp6")]
 transform = Transform3D(0.75, 0, 0, 0, 0.226453, 0.714996, 0, -0.714996, 0.226453, -1.50461, 0.606543, 0.646544)
+
+[node name="Skeleton3D" parent="roboEnemy4_Melee/Armature" index="0"]
+bones/0/position = Vector3(0, 0.201952, 0)
+bones/1/rotation = Quaternion(6.88407e-08, 3.49719e-08, -0.0566824, 0.998392)
+bones/2/rotation = Quaternion(-3.4166e-10, -4.70458e-09, 0.0059191, 0.999983)
+bones/3/rotation = Quaternion(-2.53224e-09, 5.19468e-08, 0.024121, 0.999709)
+bones/4/rotation = Quaternion(-1.46126e-07, -2.52018e-09, 0.898256, -0.439473)
+bones/5/rotation = Quaternion(-3.43273e-08, 2.1846e-07, 0.0885334, 0.996073)
+bones/6/rotation = Quaternion(-7.18818e-08, -2.25564e-08, 0.123017, 0.992405)
+bones/8/rotation = Quaternion(2.28488e-09, -6.00947e-08, -0.0571978, 0.998363)
+bones/9/rotation = Quaternion(1.70535e-08, -6.19347e-08, 0.2042, 0.978929)
+bones/11/rotation = Quaternion(-7.16381e-08, 2.27023e-08, -0.30309, 0.952962)
+bones/13/rotation = Quaternion(-3.95543e-08, -7.10596e-09, 0.450232, 0.892912)
+
+[editable path="roboEnemy4_Melee"]

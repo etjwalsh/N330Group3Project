@@ -22,6 +22,20 @@ shape = SubResource("BoxShape3D_oc8t3")
 [node name="roboEnemy2_Shoot1" parent="." instance=ExtResource("2_d5s5j")]
 transform = Transform3D(0.5, 0, 0, 0, 0.106677, 0.488487, 0, -0.488487, 0.106677, -1.26029, 0.49092, 0.659485)
 
+[node name="Skeleton3D" parent="roboEnemy2_Shoot1/Armature" index="0"]
+bones/0/position = Vector3(0, 0, -6.96685e-08)
+bones/1/rotation = Quaternion(6.68887e-08, -1.13074e-08, 0.133781, 0.991011)
+bones/2/rotation = Quaternion(4.6205e-08, -5.69027e-08, 0.606153, 0.795348)
+bones/2/scale = Vector3(1, 1, 1)
+bones/3/rotation = Quaternion(-5.96358e-09, 2.91676e-08, 0.00653825, 0.999979)
+bones/4/rotation = Quaternion(-8.00975e-10, 3.76529e-08, 0.024286, 0.999705)
+bones/4/scale = Vector3(1, 1, 1)
+bones/5/rotation = Quaternion(-1.32639e-08, -2.26813e-09, 0.194105, 0.980981)
+bones/5/scale = Vector3(1, 1, 1)
+bones/6/rotation = Quaternion(-4.62874e-09, -3.64384e-08, 0.158988, 0.987281)
+
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(1.42273, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.353397, 1.05635)
 texture = ExtResource("3_bqoga")
+
+[editable path="roboEnemy2_Shoot1"]

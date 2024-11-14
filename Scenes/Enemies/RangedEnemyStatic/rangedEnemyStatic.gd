@@ -19,12 +19,17 @@ var hitstunTimer = 0
 var aiMode = still
 var turnTime = 0
 
+var anim_direction = "rt"
+var animation = "jumpWalk"
+
 enum {still, move}
+
 
 const bullet = preload("res://Scenes/Bullets/RangedEnemyBullet/RangedEnemyBullet.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	get_node("roboEnemy1_Circle/AnimationPlayer").play("jumpWalk")
 	#$EnemySprite.modulate = Color(1, .44, .45)
 	pass
 

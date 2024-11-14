@@ -21,6 +21,7 @@ enum {still, charge, attack, swing}
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	get_node("roboEnemy4_Melee/AnimationPlayer").play("hobbleWalk")
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

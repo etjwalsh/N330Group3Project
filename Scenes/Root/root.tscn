@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://dymc3aycnuoih"]
+[gd_scene load_steps=12 format=3 uid="uid://dymc3aycnuoih"]
 
 [ext_resource type="PackedScene" uid="uid://cj4dso2g8m4he" path="res://Scenes/Player/player.tscn" id="1_3608u"]
 [ext_resource type="PackedScene" uid="uid://oyrqnsxs47ag" path="res://Scenes/UI/ui.tscn" id="3_tb5d4"]
 [ext_resource type="PackedScene" uid="uid://bxpmoqobpv15w" path="res://Scenes/GameMap/gameWorld.tscn" id="4_m311a"]
 [ext_resource type="PackedScene" uid="uid://c44ii52tjfe1v" path="res://Scenes/Enemies/enemySpawner/enemySpawner.tscn" id="5_gwpmh"]
 [ext_resource type="PackedScene" uid="uid://dgxsj3tkdckl5" path="res://Scenes/Enemies/RangedEnemy/rangedEnemy.tscn" id="6_wwvu2"]
+[ext_resource type="PackedScene" uid="uid://da8mkmqlt8wv4" path="res://Scenes/Enemies/RangedEnemyStatic/ranged_enemy_static.tscn" id="7_qali5"]
+[ext_resource type="PackedScene" uid="uid://b6ak22ivg1sl6" path="res://Scenes/Enemies/RangedEnemy2/ranged_enemy_2.tscn" id="8_271m7"]
 [ext_resource type="PackedScene" uid="uid://cu7dp837sb68w" path="res://Scenes/Enemies/MeleeEnemy/MeleeEnemy.tscn" id="9_f83i1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_px50p"]
@@ -60,3 +62,9 @@ maxEnemies = 3
 [node name="EnemySpawner6" parent="." instance=ExtResource("5_gwpmh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -115.956, 0, -0.0386868)
 maxEnemies = 6
+
+[node name="RangedEnemyStatic" parent="." instance=ExtResource("7_qali5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.56695, 0.5, 7.59929)
+
+[node name="RangedEnemy2" parent="." instance=ExtResource("8_271m7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.31989, 0.5, -3.13902)
