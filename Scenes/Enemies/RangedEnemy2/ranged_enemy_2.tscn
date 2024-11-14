@@ -4,4 +4,5 @@
 [ext_resource type="Script" path="res://Scenes/Enemies/RangedEnemy2/rangedEnemy2.gd" id="2_od82s"]
 
 [node name="RangedEnemy2" instance=ExtResource("1_bhvh3")]
+lock_rotation = true
 script = ExtResource("2_od82s")

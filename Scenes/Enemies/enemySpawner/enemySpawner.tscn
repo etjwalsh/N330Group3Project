@@ -1,15 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://c44ii52tjfe1v"]
+[gd_scene load_steps=5 format=3 uid="uid://c44ii52tjfe1v"]
 
 [ext_resource type="Script" path="res://Scenes/Enemies/enemySpawner/enemy_spawner.gd" id="1_4mshn"]
-[ext_resource type="PackedScene" uid="uid://cj4dso2g8m4he" path="res://Scenes/Player/player.tscn" id="2_38qkr"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_wyuxp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_25tbo"]
+albedo_color = Color(1, 0.247059, 1, 1)
+metallic = 1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1md2q"]
 
 [node name="EnemySpawner" type="Node3D"]
 script = ExtResource("1_4mshn")
 
-[node name="Player" parent="." instance=ExtResource("2_38qkr")]
-
 [node name="spawnDelay" type="Timer" parent="."]
 wait_time = 0.05
-autostart = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_wyuxp")
+surface_material_override/0 = SubResource("StandardMaterial3D_25tbo")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_1md2q")
 
 [connection signal="timeout" from="spawnDelay" to="." method="_on_spawn_delay_timeout"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

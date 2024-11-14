@@ -11,6 +11,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 rotation_edit_mode = 2
 collision_layer = 4
 axis_lock_linear_y = true
+lock_rotation = true
 script = ExtResource("1_glxnk")
 
 [node name="EnemySprite" type="Sprite3D" parent="."]

@@ -6,7 +6,7 @@ var staticEnemy = preload("res://Scenes/Enemies/RangedEnemyStatic/ranged_enemy_s
 var meleeEnemy = preload("res://Scenes/Enemies/MeleeEnemy/MeleeEnemy.tscn")
 
 var enemyToSpawn
-var maxEnemies = 10
+@export var maxEnemies = 5 # export so we can change the amount of enemies spawned per instance of the object
 var spawnPosX 
 var spawnPosY
 var spawnPosZ 
@@ -24,9 +24,9 @@ func _spawnEnemy():
 		3:
 			enemyToSpawn = meleeEnemy
 	
-	spawnPosX = randf_range(-10,10)
+	spawnPosX = randf_range($Area3D.position.x - 10, $Area3D.position.x + 10)
 	spawnPosY = 0
-	spawnPosZ = randf_range(-10,10)
+	spawnPosZ = randf_range($Area3D.position.y - 10, $Area3D.position.y + 10)
 	
 	var enemyToSpawnIns = enemyToSpawn.instantiate()
 	enemyToSpawnIns.position = Vector3(spawnPosX, spawnPosY, spawnPosZ)
@@ -39,3 +39,8 @@ func _spawnEnemy():
 func _on_spawn_delay_timeout() -> void:
 	_spawnEnemy()
 	pass # Replace with function body.
+
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	if (body.name == "Player"):
+		$spawnDelay.start()
