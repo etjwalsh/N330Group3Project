@@ -15,6 +15,9 @@ func _ready() -> void:
 		hearts[-1].texture = heart
 		hearts[-1].centered = false
 		add_child(hearts[-1])
+	
+	$Energy.size = get_viewport().get_visible_rect().size / Vector2(40, 2)
+	$Energy.position = Vector2(get_viewport().get_visible_rect().size.x - $Energy.size.x, 0)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
