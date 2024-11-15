@@ -19,6 +19,7 @@ var hitstunTimer = 0
 var aiMode = still
 var turnTime = 0
 
+var move_direction = 135
 var anim_direction = "rt"
 var animation = "jumpWalk"
 
@@ -29,12 +30,13 @@ const bullet = preload("res://Scenes/Bullets/RangedEnemyBullet/RangedEnemyBullet
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	get_node("roboEnemy1_Circle/AnimationPlayer").play("jumpWalk")
 	#$EnemySprite.modulate = Color(1, .44, .45)
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	
+	
 	
 	time += delta
 	
@@ -62,6 +64,7 @@ func _process(delta: float) -> void:
 			aiMode = move
 			var vect2 = Vector2.from_angle(randf() * PI/2) * speed
 			linear_velocity = Vector3(vect2.x, 0, vect2.y)
+			#move_direction = rad_to_deg(vect2.angle())
 		else:
 			aiMode = still
 	else:
@@ -71,4 +74,13 @@ func _process(delta: float) -> void:
 		still:
 			linear_velocity = Vector3.ZERO
 	
+	#Animate_loop()
+	
 	prevTime = time
+
+#func Animate_loop():
+	#if(move_direction>90):
+		#$roboEnemy1_Circle.global_scale(Vector3(1,1,1))
+	#else :
+		#$roboEnemy1_Circle.global_scale(Vector3(-1,1,1))
+	#get_node("roboEnemy1_Circle/AnimationPlayer").play("jumpWalk")

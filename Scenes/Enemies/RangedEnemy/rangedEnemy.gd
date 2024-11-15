@@ -17,6 +17,10 @@ var swordHit = false
 var hitstunTimer = 0
 var aiMode = still
 
+var move_direction = 135
+var anim_direction = "rt"
+var animation = "hoverMove"
+
 enum {still, circleLeft, circleRight}
 
 const bullet = preload("res://Scenes/Bullets/RangedEnemyBullet/RangedEnemyBullet.tscn")
@@ -65,6 +69,7 @@ func _process(delta: float) -> void:
 				var temp = PlayerAutoload.pos.direction_to(position)
 				temp = Vector2(temp.x, temp.z).rotated(PI/2)
 				linear_velocity = Vector3(temp.x, 0, temp.y) * delta * speed
+				#move_direction = rad_to_deg(temp.angle())
 		circleRight:
 			if(swordHit):
 				aiMode = still
@@ -72,5 +77,16 @@ func _process(delta: float) -> void:
 				var temp = PlayerAutoload.pos.direction_to(position)
 				temp = Vector2(temp.x, temp.z).rotated(-PI/2)
 				linear_velocity = Vector3(temp.x, 0, temp.y) * delta * speed
+				#move_direction = rad_to_deg(temp.angle())
+	
+	#Animate_loop()
 	
 	prevTime = time
+
+#func Animate_loop():
+	#print(move_direction)
+	#if((move_direction>90)||(move_direction<-90&&move_direction>-90)):
+	#	$roboEnemy2_Shoot1.global_scale(Vector3(1,1,1))
+	#else :
+	#	$roboEnemy2_Shoot1.global_scale(Vector3(-1,-1,-1))
+	#get_node("roboEnemy2_Shoot1/AnimationPlayer").play("hoverMove")
