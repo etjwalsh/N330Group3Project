@@ -10,7 +10,7 @@ const wideshotAngle = PI/8
 const wideshotBuffMax = .08
 const energyUse = 100
 const energyGain = 100
-const energyLag = .5
+const energyLag = .3
 const dashSpeed = 18
 const walkSpeed = 8
 
@@ -45,7 +45,11 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 
 func _process(delta: float) -> void:
-	PlayerAutoload.health = health
+	if(health != PlayerAutoload.health):
+		PlayerAutoload.health = health
+		if(health <= 0):
+			get_parent().get_parent().add_child(load("res://Scenes/Screens/GameOverScreen/game_over_screen.tscn").instantiate())
+			get_parent().queue_free()
 	
 	#print_debug(swordUsable)
 	if(Input.is_action_pressed("use")):

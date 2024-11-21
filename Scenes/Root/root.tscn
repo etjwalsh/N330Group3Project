@@ -19,36 +19,38 @@ tonemap_mode = 2
 
 [node name="Root" type="Node"]
 
-[node name="Player" parent="." instance=ExtResource("1_3608u")]
+[node name="MainGame" type="Node" parent="."]
+
+[node name="Player" parent="MainGame" instance=ExtResource("1_3608u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.459595, 1, 0)
 
-[node name="UI" parent="." instance=ExtResource("3_tb5d4")]
+[node name="UI" parent="MainGame" instance=ExtResource("3_tb5d4")]
 
-[node name="GameWorld" parent="." instance=ExtResource("4_m311a")]
+[node name="GameWorld" parent="MainGame" instance=ExtResource("4_m311a")]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="MainGame"]
 environment = SubResource("Environment_a48tf")
 
-[node name="EnemySpawner" parent="." instance=ExtResource("5_gwpmh")]
+[node name="EnemySpawner" parent="MainGame" instance=ExtResource("5_gwpmh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.4649, 0, -0.238998)
 maxEnemies = 3
 
-[node name="EnemySpawner2" parent="." instance=ExtResource("5_gwpmh")]
+[node name="EnemySpawner2" parent="MainGame" instance=ExtResource("5_gwpmh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.0304, 0, 0.176878)
 maxEnemies = 6
 
-[node name="EnemySpawner3" parent="." instance=ExtResource("5_gwpmh")]
+[node name="EnemySpawner3" parent="MainGame" instance=ExtResource("5_gwpmh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.8773, 0, -34.5881)
 maxEnemies = 3
 
-[node name="EnemySpawner4" parent="." instance=ExtResource("5_gwpmh")]
+[node name="EnemySpawner4" parent="MainGame" instance=ExtResource("5_gwpmh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 124.588, 0, 35.0274)
 maxEnemies = 7
 
-[node name="EnemySpawner5" parent="." instance=ExtResource("5_gwpmh")]
+[node name="EnemySpawner5" parent="MainGame" instance=ExtResource("5_gwpmh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.7078, 0, 35.4768)
 maxEnemies = 3
 
-[node name="EnemySpawner6" parent="." instance=ExtResource("5_gwpmh")]
+[node name="EnemySpawner6" parent="MainGame" instance=ExtResource("5_gwpmh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -115.956, 0, -0.0386868)
 maxEnemies = 6
