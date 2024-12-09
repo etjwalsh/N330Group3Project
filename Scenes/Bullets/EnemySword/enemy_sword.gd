@@ -17,5 +17,5 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node3D) -> void:
 	if("health" in body && !hit):
-		body.health -= 1
+		body.hurt()
 		hit = true

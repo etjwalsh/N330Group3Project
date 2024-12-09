@@ -14,5 +14,5 @@ func _physics_process(delta: float) -> void:
 
 func _on_body_entered(body: Node) -> void:
 	if("health" in body):
-		body.health -= damage
+		body.hurt()
 	queue_free()

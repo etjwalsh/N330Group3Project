@@ -13,6 +13,7 @@ const energyGain = 100
 const energyLag = .3
 const dashSpeed = 18
 const walkSpeed = 8
+const itimeLim = 1
 
 var bulletSpawn = .516
 var wideshotBuffer = 0
@@ -25,6 +26,7 @@ var canDash = true
 var energyLagTimer = 0
 var energyUsed = false
 var health = 5 
+var itime = itimeLim
 
 const bullet = preload("res://Scenes/Bullets/PlayerBullet/player_bullet.tscn")
 const laser = preload("res://Scenes/Bullets/PlayerLaser/player_laser.tscn")
@@ -45,6 +47,17 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 
 func _process(delta: float) -> void:
+	
+	if(itime != itimeLim):
+		itime += delta
+		if(int(itime * 15) % 2):
+			$AnimatedSprite3D.visible = true
+		else:
+			$AnimatedSprite3D.visible = false
+		if(itime > itimeLim):
+			itime = itimeLim
+			$AnimatedSprite3D.visible = true
+	
 	if(health != PlayerAutoload.health):
 		PlayerAutoload.health = health
 		if(health <= 0):
@@ -111,3 +124,8 @@ func _process(delta: float) -> void:
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouse:
 		weaponRotation = -(get_viewport().get_visible_rect().size / 2).angle_to_point(event.position) + PI/2
+
+func hurt():
+	if(itime == itimeLim):
+		health -= 1
+		itime = 0
