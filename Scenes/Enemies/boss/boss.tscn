@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqrkox1clhnh7"]
+
+[ext_resource type="Script" path="res://Scenes/Enemies/boss/boss.gd" id="1_27kx1"]
+[ext_resource type="Texture2D" uid="uid://c4pdaaiikwe82" path="res://Images/WhitePixel.png" id="2_rg3t6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kgy81"]
+
+[node name="Boss" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+collision_layer = 4
+script = ExtResource("1_27kx1")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+pixel_size = 1.0
+billboard = 1
+texture = ExtResource("2_rg3t6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_kgy81")

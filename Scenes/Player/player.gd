@@ -8,7 +8,7 @@ var weapon = 0
 
 const wideshotAngle = PI/8
 const wideshotBuffMax = .08
-const energyUse = 100
+const energyUse = 75
 const energyGain = 100
 const energyLag = .3
 const dashSpeed = 18
