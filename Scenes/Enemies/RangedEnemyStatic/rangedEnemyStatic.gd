@@ -36,10 +36,10 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	
-	
-	
+	#advances timer
 	time += delta
 	
+	#stops shooting if currently being hit by the player's sword
 	if(swordHit):
 		hitstunTimer += delta
 		if(hitstunTimer > hitstun):
@@ -49,6 +49,8 @@ func _process(delta: float) -> void:
 	#despawn if health zero
 	if(health <= 0):
 		queue_free()
+	
+	#shoots bullets in a circle
 	if(time >= bulletTimer):
 		time = 0
 		if(!swordHit):
@@ -58,6 +60,7 @@ func _process(delta: float) -> void:
 				enemyBulletIns.bulletSpeed = bulletSpeed
 				add_child(enemyBulletIns)
 	
+	#waits for the turn timer to get triggered and potentially turns to one of the four cardinal directions.
 	if(turnTime < 0):
 		turnTime = randf() * turnTimerMax
 		if(randi() % 2):
@@ -70,12 +73,14 @@ func _process(delta: float) -> void:
 	else:
 		turnTime -= delta
 	
+	#if the aiMode is still, don't move
 	match(aiMode):
 		still:
 			linear_velocity = Vector3.ZERO
 	
 	#Animate_loop()
 	
+	#gives the time to the prevtime variable
 	prevTime = time
 
 #func Animate_loop():

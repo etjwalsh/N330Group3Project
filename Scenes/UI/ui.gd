@@ -7,6 +7,7 @@ var hearts = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	#adds the hearts to the UI
 	var unitSize = get_viewport().get_visible_rect().size.x / 20
 	for i in heartcount:
 		hearts.append(Sprite2D.new())
@@ -16,14 +17,17 @@ func _ready() -> void:
 		hearts[-1].centered = false
 		add_child(hearts[-1])
 	
+	#configures the Energy bar position
 	$Energy.size = get_viewport().get_visible_rect().size / Vector2(40, 2)
 	$Energy.position = Vector2(get_viewport().get_visible_rect().size.x - $Energy.size.x, 0)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	#updates the energy bar fullness
 	$Energy.value = PlayerAutoload.energy
 	
+	#update the health icons when the player gets hit
 	if(PlayerAutoload.health >= 0):
 		if(hearts.size() > PlayerAutoload.health):
 			for i in hearts.size() - PlayerAutoload.health:
@@ -32,7 +36,7 @@ func _process(_delta: float) -> void:
 	else:
 		PlayerAutoload.health = 0
 
-
+#updates the size of the UI elements when the window is resized
 func _on_resized() -> void:
 	var unitSize = get_viewport().get_visible_rect().size.x / 20
 	for i in hearts.size():

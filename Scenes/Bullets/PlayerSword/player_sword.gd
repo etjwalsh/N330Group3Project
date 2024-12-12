@@ -8,12 +8,14 @@ var hits = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	#scales the sword properly
 	$AnimatedSprite3D.scale *= 4
 	$AnimatedSprite3D.position.z = 2
 	$CollisionShape3D.scale *= 4
 	$CollisionShape3D.position.z = 2
 
 func _process(delta: float) -> void:
+	#rotates the sword and disables the enemies it hits by changing a boolean
 	rotation.y += ROTATION_SPEED * delta
 	if(rotation.y > ROTATION_LIMIT):
 		get_parent().queue_free()

@@ -33,8 +33,10 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	
+	#advances timer
 	time += delta
 	
+	#stops shooting if currently being hit by the player's sword
 	if(swordHit):
 		hitstunTimer += delta
 		if(hitstunTimer > hitstun):
@@ -44,6 +46,8 @@ func _process(delta: float) -> void:
 	#despawn if health zero
 	if(health <= 0):
 		queue_free()
+	
+	#spawn a bunch of bullets aimed at the player in a spread pattern
 	if(time >= bulletTimer):
 		time = 0
 		if(!swordHit):
@@ -56,9 +60,13 @@ func _process(delta: float) -> void:
 				enemyBulletIns.position += enemyBulletIns.basis.x * (i - floor(bulletNum / 2.0)) * bulletSpreadDist
 				add_child(enemyBulletIns)
 	
+	#the AI mode is decided at random between three modes every time the time rolls over
 	if(fmod(time, moveUpdate) < fmod(prevTime, moveUpdate)):
 		aiMode = randi() % 3
 	
+	#based on the AImode this code executes how the enemy should act. "still" means the enemy is
+	#not moving, circle right makes the guy circle to the right of the player and circle left
+	#makes the guy circle to the left of the player
 	match(aiMode):
 		still:
 			linear_velocity = Vector3.ZERO
@@ -81,6 +89,7 @@ func _process(delta: float) -> void:
 	
 	#Animate_loop()
 	
+	#gives the time to the prevtime variable
 	prevTime = time
 
 #func Animate_loop():

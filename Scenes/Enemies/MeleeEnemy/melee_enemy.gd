@@ -27,6 +27,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	
+	#if the enemy has been hit by the player's sword, prevent them from swinging
 	if(swordHit):
 		hitstunTimer += delta
 		if(hitstunTimer > hitstun):
@@ -37,6 +38,8 @@ func _process(delta: float) -> void:
 	if(health <= 0):
 		queue_free()
 	
+	#matches the AI mode with what the AI should do. Stay still if "still", charge toward the player
+	#if "charge", be swinging if "swing"
 	match(aiMode):
 		still:
 			time -= delta
@@ -78,4 +81,5 @@ func _process(delta: float) -> void:
 				aiMode = still
 				time = moveUpdate
 	
+	#makes the timer tracking the previous time marker track the previous time marker.
 	prevTime = time
