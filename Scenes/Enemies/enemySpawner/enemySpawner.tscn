@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://c44ii52tjfe1v"]
+[gd_scene load_steps=7 format=3 uid="uid://c44ii52tjfe1v"]
 
 [ext_resource type="Script" path="res://Scenes/Enemies/enemySpawner/enemy_spawner.gd" id="1_4mshn"]
 [ext_resource type="Texture2D" uid="uid://dvqp6deso7a78" path="res://Images/wood.png" id="2_86faa"]
+[ext_resource type="PackedScene" uid="uid://y5bpssm607ps" path="res://Scenes/rooms/roomDoor.tscn" id="3_ge57d"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_wyuxp"]
 
@@ -15,18 +16,92 @@ metallic = 1.0
 script = ExtResource("1_4mshn")
 
 [node name="spawnDelay" type="Timer" parent="."]
-wait_time = 0.05
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_wyuxp")
 surface_material_override/0 = SubResource("StandardMaterial3D_25tbo")
 
 [node name="Area3D" type="Area3D" parent="."]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, 0, 0, 0)
 collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("BoxShape3D_1md2q")
+
+[node name="BigWall" type="Node3D" parent="."]
+visible = false
+
+[node name="roomDoor" parent="BigWall" instance=ExtResource("3_ge57d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 14)
+
+[node name="roomDoor2" parent="BigWall" instance=ExtResource("3_ge57d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 14)
+
+[node name="roomDoor3" parent="BigWall" instance=ExtResource("3_ge57d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 14)
+
+[node name="roomDoor4" parent="BigWall" instance=ExtResource("3_ge57d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 14)
+
+[node name="roomDoor5" parent="BigWall" instance=ExtResource("3_ge57d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 14)
+
+[node name="roomDoor6" parent="BigWall" instance=ExtResource("3_ge57d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 14)
+
+[node name="roomDoor15" parent="BigWall" instance=ExtResource("3_ge57d")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -15, 0, -11)
+
+[node name="roomDoor16" parent="BigWall" instance=ExtResource("3_ge57d")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -15, 0, -6)
+
+[node name="roomDoor17" parent="BigWall" instance=ExtResource("3_ge57d")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -15, 0, -1)
+
+[node name="roomDoor18" parent="BigWall" instance=ExtResource("3_ge57d")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -15, 0, 4)
+
+[node name="roomDoor19" parent="BigWall" instance=ExtResource("3_ge57d")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -15, 0, 9)
+
+[node name="roomDoor20" parent="BigWall" instance=ExtResource("3_ge57d")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 15, 0, -11)
+
+[node name="roomDoor21" parent="BigWall" instance=ExtResource("3_ge57d")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 15, 0, -6)
+
+[node name="roomDoor22" parent="BigWall" instance=ExtResource("3_ge57d")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 15, 0, -1)
+
+[node name="roomDoor23" parent="BigWall" instance=ExtResource("3_ge57d")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 15, 0, 4)
+
+[node name="roomDoor24" parent="BigWall" instance=ExtResource("3_ge57d")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 15, 0, 9)
+
+[node name="roomDoor7" parent="BigWall" instance=ExtResource("3_ge57d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 14)
+
+[node name="roomDoor8" parent="BigWall" instance=ExtResource("3_ge57d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -16)
+
+[node name="roomDoor9" parent="BigWall" instance=ExtResource("3_ge57d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -16)
+
+[node name="roomDoor10" parent="BigWall" instance=ExtResource("3_ge57d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -16)
+
+[node name="roomDoor11" parent="BigWall" instance=ExtResource("3_ge57d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16)
+
+[node name="roomDoor12" parent="BigWall" instance=ExtResource("3_ge57d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -16)
+
+[node name="roomDoor13" parent="BigWall" instance=ExtResource("3_ge57d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -16)
+
+[node name="roomDoor14" parent="BigWall" instance=ExtResource("3_ge57d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -16)
 
 [connection signal="timeout" from="spawnDelay" to="." method="_on_spawn_delay_timeout"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
