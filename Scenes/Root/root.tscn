@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dymc3aycnuoih"]
+[gd_scene load_steps=12 format=3 uid="uid://dymc3aycnuoih"]
 
 [ext_resource type="PackedScene" uid="uid://cj4dso2g8m4he" path="res://Scenes/Player/player.tscn" id="1_3608u"]
 [ext_resource type="PackedScene" uid="uid://oyrqnsxs47ag" path="res://Scenes/UI/ui.tscn" id="3_tb5d4"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bf1gi41ens85q" path="res://Scenes/Bullets/PlayerLaser/laser_arm_pickup.tscn" id="5_kfymo"]
 [ext_resource type="PackedScene" uid="uid://8r57k5rrkbrs" path="res://Scenes/Bullets/PlayerSword/sword_arm_pickup.tscn" id="6_qyn4e"]
 [ext_resource type="PackedScene" uid="uid://y5bpssm607ps" path="res://Scenes/rooms/roomDoor.tscn" id="7_beupe"]
+[ext_resource type="PackedScene" uid="uid://cqrkox1clhnh7" path="res://Scenes/Enemies/boss/boss.tscn" id="8_eout1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_px50p"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -89,3 +90,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, 0, 1)
 
 [node name="EnemySpawner15" parent="Spawners" instance=ExtResource("5_gwpmh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 160, 0, 1)
+
+[node name="Boss" parent="." instance=ExtResource("8_eout1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.717499, 4.55422, -4.83638)

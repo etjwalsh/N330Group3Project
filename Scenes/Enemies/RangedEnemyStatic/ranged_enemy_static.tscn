@@ -8,11 +8,17 @@
 gravity_scale = 0.0
 script = ExtResource("2_mjn10")
 
+[node name="CollisionShape3D" parent="." index="0"]
+disabled = true
+
 [node name="roboEnemy2_Shoot1" parent="." index="1"]
 visible = false
 
 [node name="roboEnemy1_Circle" parent="." index="3" instance=ExtResource("3_hjjuk")]
-transform = Transform3D(0.2, 2.20319e-08, -1.12258e-08, -3.37508e-14, 0.090798, 0.178201, 2.47269e-08, -0.178201, 0.090798, 1.50475, 0.498436, 1.1802)
+transform = Transform3D(0.2, 2.20319e-08, -1.12258e-08, -3.37508e-14, 0.090798, 0.178201, 2.47269e-08, -0.178201, 0.090798, 2.89408, 0.446301, 0.519502)
+
+[node name="Armature" parent="roboEnemy1_Circle" index="0"]
+transform = Transform3D(-1, -1.42109e-14, -1.50996e-07, -1.06581e-14, 1, 0, 1.50996e-07, 0, -1, -8.65831, 3.47846, 4.76837e-07)
 
 [node name="Skeleton3D" parent="roboEnemy1_Circle/Armature" index="0"]
 bones/0/position = Vector3(0.0163308, -0.0902345, 1.21238e-08)
