@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cw6ryixisno1d"]
+
+[ext_resource type="PackedScene" uid="uid://citb2laqmjr17" path="res://Animations/roboBoss.blend" id="1_qvy5k"]
+
+[node name="roboBoss" instance=ExtResource("1_qvy5k")]
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/0/position = Vector3(0, 0, 0)
+bones/1/rotation = Quaternion(0.999778, 0.0210773, 4.44685e-08, -1.9346e-07)
+bones/2/rotation = Quaternion(6.71354e-08, 1.11388e-08, 0.00382211, 0.999993)
+bones/4/rotation = Quaternion(-4.0056e-08, 2.90085e-08, 0.809919, 0.586541)
+bones/5/rotation = Quaternion(-2.04388e-08, -2.44904e-08, 0.2784, 0.960465)
+bones/6/rotation = Quaternion(-7.69888e-08, 4.82763e-08, 0.677838, 0.735211)
+bones/7/rotation = Quaternion(-1.32541e-07, -9.48201e-08, -0.813304, 0.581839)
+bones/8/rotation = Quaternion(-6.22751e-08, 1.49775e-07, -0.379643, 0.925133)
+bones/9/rotation = Quaternion(1.93213e-09, 5.22862e-09, -0.497197, 0.867637)

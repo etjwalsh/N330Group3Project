@@ -92,4 +92,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, 0, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 160, 0, 1)
 
 [node name="Boss" parent="." instance=ExtResource("8_eout1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.717499, 4.55422, -4.83638)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.717499, 0.956968, -4.83638)

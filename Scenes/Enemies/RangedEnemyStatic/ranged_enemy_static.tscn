@@ -9,6 +9,7 @@ gravity_scale = 0.0
 script = ExtResource("2_mjn10")
 
 [node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.12692, 0.5, -0.676468)
 disabled = true
 
 [node name="roboEnemy2_Shoot1" parent="." index="1"]
