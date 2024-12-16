@@ -2,7 +2,7 @@ extends Node3D
 
 var wideshotEnemy = preload("res://Scenes/Enemies/RangedEnemy/rangedEnemy.tscn")
 var shotgunEnemy = preload("res://Scenes/Enemies/RangedEnemy2/ranged_enemy_2.tscn")
-var staticEnemy = preload("res://Scenes/Enemies/RangedEnemyStatic/ranged_enemy_static.tscn")
+var staticEnemy = preload("res://Scenes/Enemies/RangedEnemyStatic/JUMPER.tscn")
 var meleeEnemy = preload("res://Scenes/Enemies/MeleeEnemy/MeleeEnemy.tscn")
 var door = preload("res://Scenes/rooms/roomDoor.tscn")
 
