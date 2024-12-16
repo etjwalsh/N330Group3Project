@@ -30,6 +30,7 @@ const bullet = preload("res://Scenes/Bullets/RangedEnemyBullet/RangedEnemyBullet
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	get_node("roboEnemy1_Circle/AnimationPlayer").play("jumpWalk")
 	#$EnemySprite.modulate = Color(1, .44, .45)
 	pass
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dymc3aycnuoih"]
+[gd_scene load_steps=15 format=3 uid="uid://dymc3aycnuoih"]
 
 [ext_resource type="PackedScene" uid="uid://cj4dso2g8m4he" path="res://Scenes/Player/player.tscn" id="1_3608u"]
 [ext_resource type="PackedScene" uid="uid://oyrqnsxs47ag" path="res://Scenes/UI/ui.tscn" id="3_tb5d4"]
@@ -7,7 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://bf1gi41ens85q" path="res://Scenes/Bullets/PlayerLaser/laser_arm_pickup.tscn" id="5_kfymo"]
 [ext_resource type="PackedScene" uid="uid://8r57k5rrkbrs" path="res://Scenes/Bullets/PlayerSword/sword_arm_pickup.tscn" id="6_qyn4e"]
 [ext_resource type="PackedScene" uid="uid://y5bpssm607ps" path="res://Scenes/rooms/roomDoor.tscn" id="7_beupe"]
-[ext_resource type="PackedScene" uid="uid://cqrkox1clhnh7" path="res://Scenes/Enemies/boss/boss.tscn" id="8_eout1"]
+[ext_resource type="PackedScene" uid="uid://b6ak22ivg1sl6" path="res://Scenes/Enemies/RangedEnemy2/ranged_enemy_2.tscn" id="8_tfbw4"]
+[ext_resource type="PackedScene" uid="uid://da8mkmqlt8wv4" path="res://Scenes/Enemies/RangedEnemyStatic/ranged_enemy_static.tscn" id="9_m0uab"]
+[ext_resource type="PackedScene" uid="uid://dgxsj3tkdckl5" path="res://Scenes/Enemies/RangedEnemy/rangedEnemy.tscn" id="10_i354f"]
+[ext_resource type="PackedScene" uid="uid://cu7dp837sb68w" path="res://Scenes/Enemies/MeleeEnemy/MeleeEnemy.tscn" id="11_x0e7y"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_px50p"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -91,5 +94,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, 0, 1)
 [node name="EnemySpawner15" parent="Spawners" instance=ExtResource("5_gwpmh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 160, 0, 1)
 
-[node name="Boss" parent="." instance=ExtResource("8_eout1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.717499, 0.956968, -4.83638)
+[node name="RangedEnemy2" parent="." instance=ExtResource("8_tfbw4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.76127, 0.5, -3.6434)
+
+[node name="RangedEnemyStatic" parent="." instance=ExtResource("9_m0uab")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.85241, 0.5, -2.77892)
+
+[node name="RangedEnemy" parent="." instance=ExtResource("10_i354f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.62424, 0.5, 9.0319)
+
+[node name="MeleeEnemy" parent="." instance=ExtResource("11_x0e7y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.76707, 0.5, 10.0414)
