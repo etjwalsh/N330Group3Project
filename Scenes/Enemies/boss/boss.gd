@@ -39,7 +39,6 @@ var spawnPos = Vector3()
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	get_node("roboBoss/AnimationPlayer").play("Idle")
-	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -48,11 +47,15 @@ func _process(delta: float) -> void:
 	if(health <= 0):
 		queue_free()
 	
+	#Executing decides which attack this boss is currently doing and aimode determines what part of that attack it is on.
 	match(executing):
+		#makes the boss still and decides which attack the boss is doing next
 		0:
 			time += delta
 			if(time > triggerTime):
 				time = 0
+				#the boss has two phases: one when the boss has over 50% health and the other
+				#when the boss has less than 50% health
 				if(health < maxHealth / 2):
 					phase = 1
 				match(phase):
@@ -72,6 +75,7 @@ func _process(delta: float) -> void:
 							1:
 								executing = 4
 								pattern = 0
+		#charges toward the player and slashes at then with bullet spread
 		1:
 			match(aiMode):
 				0:
@@ -102,6 +106,7 @@ func _process(delta: float) -> void:
 						time = 0
 					else:
 						linear_velocity = Vector3.ZERO
+		#shoots a shotgun shot at the player
 		2:
 			var dir = -Vector2(position.x, position.z).angle_to_point(Vector2(PlayerAutoload.pos.x, PlayerAutoload.pos.z)) + PI/2
 			for i in bulletNum2:
@@ -112,6 +117,7 @@ func _process(delta: float) -> void:
 				add_child(enemyBulletIns)
 			executing = 0
 			aiMode = 0
+		#spawns additional enemies that attack the player
 		3:
 			match int(randi_range(0,3)):
 				0:
@@ -126,6 +132,7 @@ func _process(delta: float) -> void:
 			add_child(enemyToSpawn)
 			executing = 0
 			aiMode = 0
+		#charges at the player and slashes with a spread shot
 		4:
 			match(aiMode):
 				0:
