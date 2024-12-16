@@ -23,7 +23,7 @@ transform = Transform3D(1.42273, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 
 transform = Transform3D(0.2, 2.20319e-08, -1.12258e-08, -3.37508e-14, 0.090798, 0.178201, 2.47269e-08, -0.178201, 0.090798, 1.75251, 0.446301, 0.519502)
 
 [node name="Armature" parent="roboEnemy1_Circle" index="0"]
-transform = Transform3D(-1, -1.42109e-14, -1.50996e-07, -1.06581e-14, 1, 0, 1.50996e-07, 0, -1, -8.65831, 3.47846, 4.76837e-07)
+transform = Transform3D(-1, -1.06581e-14, -1.50996e-07, -1.06581e-14, 1, -2.14579e-21, 1.50996e-07, -5.36461e-22, -1, -8.65831, 3.47846, 4.76837e-07)
 
 [node name="Skeleton3D" parent="roboEnemy1_Circle/Armature" index="0"]
 bones/0/position = Vector3(0.0163308, -0.0902345, 1.21238e-08)

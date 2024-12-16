@@ -91,5 +91,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125, 0, 1)
 [node name="EnemySpawner15" parent="Spawners" instance=ExtResource("5_gwpmh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 160, 0, 1)
 
-[node name="Jumper" parent="." instance=ExtResource("9_jblr1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.64522, 0, -4.89547)
+[node name="RigidBody3D" parent="." instance=ExtResource("9_jblr1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.37179, 0, -8.77364)
