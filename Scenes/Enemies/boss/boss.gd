@@ -88,6 +88,8 @@ func _process(delta: float) -> void:
 						aiMode = 1
 						time = windup
 				1:
+					get_node("roboBoss/AnimationPlayer").play("Swing")
+					get_node("roboBoss/AnimationPlayer").queue("Idle")
 					time -= delta
 					if(time <= 0):
 						if(!is_instance_valid(enemySwordIns)):
@@ -108,6 +110,8 @@ func _process(delta: float) -> void:
 						linear_velocity = Vector3.ZERO
 		#shoots a shotgun shot at the player
 		2:
+			get_node("roboBoss/AnimationPlayer").play("Shoot")
+			get_node("roboBoss/AnimationPlayer").queue("Idle")
 			var dir = -Vector2(position.x, position.z).angle_to_point(Vector2(PlayerAutoload.pos.x, PlayerAutoload.pos.z)) + PI/2
 			for i in bulletNum2:
 				enemyBulletIns = bullet.instantiate()
