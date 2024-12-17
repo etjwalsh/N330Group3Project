@@ -1,12 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://dymc3aycnuoih"]
+[gd_scene load_steps=11 format=3 uid="uid://dymc3aycnuoih"]
 
 [ext_resource type="PackedScene" uid="uid://cj4dso2g8m4he" path="res://Scenes/Player/player.tscn" id="1_3608u"]
 [ext_resource type="PackedScene" uid="uid://oyrqnsxs47ag" path="res://Scenes/UI/ui.tscn" id="3_tb5d4"]
 [ext_resource type="PackedScene" uid="uid://bxpmoqobpv15w" path="res://Scenes/GameMap/gameWorld.tscn" id="4_m311a"]
 [ext_resource type="PackedScene" uid="uid://c44ii52tjfe1v" path="res://Scenes/Enemies/enemySpawner/enemySpawner.tscn" id="5_gwpmh"]
-[ext_resource type="PackedScene" uid="uid://bf1gi41ens85q" path="res://Scenes/Bullets/PlayerLaser/laser_arm_pickup.tscn" id="5_kfymo"]
-[ext_resource type="PackedScene" uid="uid://8r57k5rrkbrs" path="res://Scenes/Bullets/PlayerSword/sword_arm_pickup.tscn" id="6_qyn4e"]
 [ext_resource type="PackedScene" uid="uid://y5bpssm607ps" path="res://Scenes/rooms/roomDoor.tscn" id="7_beupe"]
+[ext_resource type="PackedScene" uid="uid://dnhv3ldtr7x4r" path="res://Scenes/rooms/bossDoor.tscn" id="7_tucon"]
 [ext_resource type="PackedScene" uid="uid://cm8nuf7c7bplw" path="res://Scenes/Enemies/RangedEnemyStatic/JUMPER.tscn" id="9_jblr1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_px50p"]
@@ -26,7 +25,7 @@ tonemap_mode = 2
 [node name="MainGame" type="Node" parent="."]
 
 [node name="Player" parent="MainGame" instance=ExtResource("1_3608u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.459595, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.459595, 1, 2)
 
 [node name="UI" parent="MainGame" instance=ExtResource("3_tb5d4")]
 
@@ -35,14 +34,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.459595, 1, 0)
 [node name="WorldEnvironment" type="WorldEnvironment" parent="MainGame"]
 environment = SubResource("Environment_a48tf")
 
-[node name="SwordArmPickup2" parent="." instance=ExtResource("6_qyn4e")]
-transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 193.987, 1, 0.335)
-
 [node name="roomDoor" parent="." instance=ExtResource("7_beupe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70, 0, 0)
-
-[node name="SwordArmPickup" parent="." instance=ExtResource("5_kfymo")]
-transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, -152, 1, 33)
 
 [node name="Spawners" type="Node3D" parent="."]
 
@@ -93,3 +86,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 160, 0, 1)
 
 [node name="Jumper" parent="." instance=ExtResource("9_jblr1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.64522, 0, -4.89547)
+
+[node name="Node3D" parent="." instance=ExtResource("7_tucon")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0, 0, -30)
