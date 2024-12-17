@@ -276,7 +276,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.2561, 1.0739, 28.9158)
 transform = Transform3D(0.51, 0, 0, 0, 0.51, 0, 0, 0, 0.51, -69.7626, 1.08843, 44.7881)
 
 [node name="Object42" parent="." instance=ExtResource("7_wcnl4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -141.6, 0.970478, 28.7567)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -145.31, 0.970478, 28.7567)
 
 [node name="Object43" parent="." instance=ExtResource("7_wcnl4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -158.411, 1.24022, 27.9891)
@@ -286,6 +286,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -158.576, 1.0169, 44.3577)
 
 [node name="Object45" parent="." instance=ExtResource("8_fm8h5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -118.887, 0.141701, 34.9416)
+
+[node name="Object47" parent="." instance=ExtResource("8_fm8h5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -109.2, 0.141701, 34.9416)
 
 [node name="Object46" parent="." instance=ExtResource("4_4nsxu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -107.71, 0.7964, 45.4487)
