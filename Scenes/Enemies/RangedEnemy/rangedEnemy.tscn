@@ -20,7 +20,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34217, 0.5, -0.676468)
 shape = SubResource("BoxShape3D_oc8t3")
 
 [node name="roboEnemy2_Shoot1" parent="." instance=ExtResource("2_d5s5j")]
-transform = Transform3D(0.5, 0, 0, 0, 0.106677, 0.488487, 0, -0.488487, 0.106677, 0, 0, 0)
+transform = Transform3D(0.5, 0, 0, 0, 0.226995, 0.445503, 0, -0.445503, 0.226995, 0, 0, 0)
 
 [node name="Skeleton3D" parent="roboEnemy2_Shoot1/Armature" index="0"]
 bones/0/position = Vector3(0, 0, -6.96685e-08)

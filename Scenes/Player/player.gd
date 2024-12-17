@@ -48,6 +48,12 @@ func _physics_process(_delta: float) -> void:
 
 func _process(delta: float) -> void:
 	
+	if (velocity.x ==0 && velocity.z ==0):
+		get_node("catModel/AnimationPlayer").play("idle_R")
+	else:
+		get_node("catModel/AnimationPlayer").play("run")
+	
+	
 	#checks if iframes are currectly active, and if so it blinks the sprite
 	if(itime != itimeLim):
 		itime += delta

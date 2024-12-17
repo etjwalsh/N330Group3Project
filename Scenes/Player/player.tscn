@@ -25,16 +25,17 @@ transform = Transform3D(1, 0, 0, 0, 0.34202, 0.939693, 0, -0.939693, 0.34202, 0,
 current = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.172267, 0.154207, -0.280608)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.172267, -0.322801, -0.280608)
 shape = SubResource("CylinderShape3D_tpw53")
+
+[node name="catModel" parent="." instance=ExtResource("2_as53f")]
+transform = Transform3D(-6.94559e-09, 1.36315e-08, -0.35, 0.311852, 0.158897, 0, 0.158897, -0.311852, -1.5299e-08, 0, -0.318461, 0)
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(6.6874e-16, 1.5299e-08, -0.35, 0.35, -1.5299e-08, 0, -1.5299e-08, -0.35, -1.5299e-08, 0, 0, 0)
 billboard = 1
 sprite_frames = SubResource("SpriteFrames_kveap")
 
-[node name="catModel13" parent="AnimatedSprite3D" instance=ExtResource("2_as53f")]
-
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(1.2, 0, 0, 0, -5.24537e-08, -1.2, 0, 1.2, -5.24537e-08, 0.147116, 0, 1.22325)
+transform = Transform3D(1.2, 0, 0, 0, -5.24537e-08, -1.2, 0, 1.2, -5.24537e-08, 0.147116, -0.853226, 1.22325)
 texture = ExtResource("3_g75q1")
