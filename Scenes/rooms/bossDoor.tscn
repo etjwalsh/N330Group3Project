@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnhv3ldtr7x4r"]
+[gd_scene load_steps=5 format=3 uid="uid://dkbpjxtar2hjo"]
 
 [ext_resource type="PackedScene" uid="uid://y5bpssm607ps" path="res://Scenes/rooms/roomDoor.tscn" id="1_5488o"]
 [ext_resource type="Script" path="res://Scripts/boss_door.gd" id="1_fg34i"]
