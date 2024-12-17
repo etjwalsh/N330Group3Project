@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bxpmoqobpv15w" path="res://Scenes/GameMap/gameWorld.tscn" id="4_m311a"]
 [ext_resource type="PackedScene" uid="uid://c44ii52tjfe1v" path="res://Scenes/Enemies/enemySpawner/enemySpawner.tscn" id="5_gwpmh"]
 [ext_resource type="PackedScene" uid="uid://y5bpssm607ps" path="res://Scenes/rooms/roomDoor.tscn" id="7_beupe"]
-[ext_resource type="PackedScene" path="res://Scenes/rooms/bossDoor.tscn" id="7_tucon"]
+[ext_resource type="PackedScene" uid="uid://dnhv3ldtr7x4r" path="res://Scenes/rooms/bossDoor.tscn" id="7_tucon"]
 [ext_resource type="PackedScene" uid="uid://cm8nuf7c7bplw" path="res://Scenes/Enemies/RangedEnemyStatic/JUMPER.tscn" id="9_jblr1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_px50p"]
@@ -30,6 +30,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.459595, 1, 2)
 [node name="UI" parent="MainGame" instance=ExtResource("3_tb5d4")]
 
 [node name="GameWorld" parent="MainGame" instance=ExtResource("4_m311a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00106812, -0.0452499, 0.154217)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="MainGame"]
 environment = SubResource("Environment_a48tf")
