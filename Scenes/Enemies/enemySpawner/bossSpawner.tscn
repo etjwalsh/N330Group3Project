@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlvu8xooapw5p"]
+
+[ext_resource type="PackedScene" uid="uid://c44ii52tjfe1v" path="res://Scenes/Enemies/enemySpawner/enemySpawner.tscn" id="1_u0uoo"]
+[ext_resource type="Script" path="res://Scenes/Enemies/enemySpawner/boss_spawner.gd" id="2_rq1rk"]
+
+[node name="bossSpawner" instance=ExtResource("1_u0uoo")]
+script = ExtResource("2_rq1rk")
+maxEnemies = 1
