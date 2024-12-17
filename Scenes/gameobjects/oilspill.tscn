@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://da3gbk1dfpjhi"]
+
+[ext_resource type="Texture2D" uid="uid://7kqsvpv5hctm" path="res://Images/oil spill.png" id="1_wj0gn"]
+
+[node name="Object1" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.453991, 0.891007, 0, -0.891007, 0.453991, 0, 0, 0)
+texture = ExtResource("1_wj0gn")

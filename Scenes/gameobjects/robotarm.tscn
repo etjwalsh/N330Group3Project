@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dt31fmcwp2oi8"]
+
+[ext_resource type="Texture2D" uid="uid://i1mgb5ycu21g" path="res://Images/robot arm.png" id="1_6i4w7"]
+
+[node name="Object1" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.453991, 0.891007, 0, -0.891007, 0.453991, 0, 0, 0)
+texture = ExtResource("1_6i4w7")
