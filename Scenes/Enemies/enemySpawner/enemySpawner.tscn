@@ -11,6 +11,7 @@ albedo_texture = ExtResource("2_86faa")
 metallic = 1.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1md2q"]
+size = Vector3(2, 2, 2)
 
 [node name="EnemySpawner" type="Node3D"]
 script = ExtResource("1_4mshn")
